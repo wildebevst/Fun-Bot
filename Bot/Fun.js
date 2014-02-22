@@ -484,11 +484,11 @@ function chatMe(msg)
  
                     case "download":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("Download your song free here: http://www.vebsi.com/");
+                            API.sendChat("Download your song free here: http://soundcloud-dl.com/");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Download your song free here: http://www.vebsi.com/");
+                            API.sendChat(command[1]+" Download your song free here: http://soundcloud-dl.com/");
                         }else{
-                            API.sendChat("Download your song free here: http://www.vebsi.com/");
+                            API.sendChat("Download your song free here:http://soundcloud-dl.com/");
                         }
                         break;
  
