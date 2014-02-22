@@ -28,7 +28,7 @@
  
 
  * @Author:    Tawi Jordan - ๖ۣۜĐJ - ɴᴇᴏɴ - TFL (Member. on Plug.dj)
- *
+ * @Admin:            Will - ωιℓ∂євє/\ѕт      (Host. on (╯︵╰,) ᴱᴹᴼᵀᴵᴼᴺᴬᴸ)
  */
 
 
@@ -86,7 +86,6 @@ var announcements =
 
 // Keywords of blocked songs
 var blockedSongs = [
-    "Rick Roll",
     "GANGNAM",
     "The Fox",
     "The Fox [Official music video HD]",
@@ -95,13 +94,12 @@ var blockedSongs = [
 
 // Keywords of blocked artist.
 var blockedArtists = [
-    "Rick Astley",
-    "Miley Cyrus"
+    "none"
 ];
 
 // Filter Keywords
 Funbot.filters.beggerWords = ["fanme","fan me","fan4fan","fan 4 fan","fan pls","fans please","need fan","more fan","fan back","give me fans","gimme fans"];
-Funbot.filters.commandWords = ["!status",".changelog",".say",".catfact",".dogfact",".fortune",".songlink",".down",".join",".status",".tcf",".cf",".rules",".version",".test"];
+Funbot.filters.commandWords = ["!status",".changelog",".say",".weedfact",".feel",".fortune",".songlink",".down",".join",".status",".tcf",".cf",".rules",".version",".test"];
 
 // Fun misc
 Funbot.misc.tacos = ["blunt","kush","Chemo","Locoweed","marijuana","Ganja"];
@@ -131,95 +129,68 @@ Funbot.misc.ball = [
 Funbot.misc.ht = ["My magic coins says: Tails", "My magic coin says: Heads"];
 
 Funbot.misc.roll = [
-"You rolled A 1. Bummer :(",
+"You rolled A 1. You Suck",
 "You rolled A 2. Bummer :(",
-"You rolled A 3. Bummer :("];
+"You rolled A 3. Your Bad"];
 
 Funbot.misc.roll2 = [
 "4. Awesome!",
-"5. Awesome!",
-"6. Awesome!"];
+"5. Sweet!",
+"6. Your the Best!"];
  
-Funbot.misc.catfact = [
-"Cats have five toes on each front paw, but only four toes on each back paw.",
-"Cats have true fur, in that they have both an undercoat and an outer coat.",
-"Newborn kittens have closed ear canals that don''t begin to open for nine days.When the eyes open, they are always blue at first. They change color over a period of months to the final eye color.",
-"Most cats have no eyelashes.","A cat cannot see directly under its nose.",
-"You can tell a cat's mood by looking into its eyes. A frightened or excited cat will have large, round pupils. An angry cat will have narrow pupils. The pupil size is related as much to the cat's emotions as to the degree of light.",
-"It is a common belief that cats are color blind. However, recent studies have shown that cats can see blue, green and red.",
-"A cat can jump even seven times as high as it is tall.",
-"The cat's footpads absorb the shocks of the landing when the cat jumps.",
-"A cat is pregnant for about 58-65 days.",
-"When well treated, a cat can live twenty or more years but the average life span of a domestic cat is 14 years.",
-"Neutering a cat extends its life span by two or three years.",
-"Cats can't taste sweets.",
-"Cats must have fat in their diet because they can't produce it on their own.",
-"Some common houseplants poisonous to cats include: English Ivy, iris, mistletoe, philodendron, and yew.",
-"Tylenol and chocolate are both poisonous to cats.",
-"Many cats cannot properly digest cow's milk.",
-"The average cat food meal is the equivalent to about five mice.",
-"Cats have AB blood groups just like people.",
-"The color of the points in Siamese cats is heat related. Cool areas are darker.",
-"The chlorine in fresh tap water irritates sensitive parts of the cat's nose. Let tap water sit for 24 hours before giving it to a cat.",
-"Today there are about 100 distinct breeds of the domestic cat.",
-"The first cat show was in 1871 at the Crystal Palace in London.",
-"In ancient Egypt, mummies were made of cats, and embalmed mice were placed with them in their tombs. In one ancient city, over 300,000 cat mummies were found.",
-"In ancient Egypt, killing a cat was a crime punishable by death.",
-"The ancestor of all domestic cats is the African Wild Cat which still exists today.",
-"Cats do not think that they are little people. They think that we are big cats. This influences their behavior in many ways.",
-"Abraham Lincoln loved cats. He had four of them while he lived in the White House.",
-"Julius Caesar, Henri II, Charles XI, and Napoleon were all afraid of cats.",
-"Cats have an average of 24 whiskers, arranged in four horizontal rows on each side.",
-"Almost 10% of a cat's bones are in its tail, and the tail is used to maintain balance.",
-"Jaguars are the only big cats that don't roar.",
-"A cat's field of vision is about 185 degrees.",
-"The Maine Coon is 4 to 5 times larger than the Cingapura, the smallest breed of cat.",
-"Retractable claws are a physical phenomenon that sets cats apart from the rest of the animal kingdom. In the cat family, only cheetahs cannot retract their claws.",
-"A cat can sprint at about thirty-one miles per hour.",
-"A cat can spend five or more hours a day grooming themselves.",
-"The cat has been living in close association with humans for somewhere between 3,500 and 8,000 years.",
-"The domestic house cat is a small carnivorous mammal. Its most immediate ancestor is believed to be the African wild cat.",
-"Cats usually weigh between 2.5 and 7 kg (5.5–16 pounds), although some breeds can exceed 11.3 kg (25 pounds).",
-"Domestic cats tend to live longer if they are not permitted to go outdoors.",
-"Cats, in some cases, can sleep as much as 20 hours in a 24-hour period. The term cat nap refers to the cat's ability to fall asleep (lightly) for a brief period.",
-"Cats dislike citrus scent.",
-"A cat''s tongue has tiny barbs on it.",
-"Cats can be right-pawed or left-pawed.",
-"It has been scientifically proven that stroking a cat can lower one's blood pressure.",
-"Six-toed kittens are so common in Boston and surrounding areas of Massachusetts that experts consider it an established mutation.",
-"Cat families usually play best in even numbers. Cats and kittens should be acquired in pairs whenever possible."];
+Funbot.misc.weedfact = [
+"No one has ever overdosed or died from smoking too much weed. In the history of mankind.",
+"Marijuana has been in an “official” state of prohibition since 1937-s Marijuana Tax Act (in the United States). Because, among other reasons, it made white women desire black men.",
+"Colorado and Washington have estimated tax revenues of over $550 Million from legalization",
+"There are more medical marijuana dispensaries than Starbucks in Los Angeles and Denver. Because reefer is safer than coffee.",
+"The first law in America relating to cannabis was a 1619 law that actually required farmers to grow the hemp plant. Once harvested, hemp was useful for clothing, sails, and rope.",
+"In 1906, cannabis was labeled as a “poison” and states began restricting its sale.",
+"By the mid 1930s, cannabis was regulated as a drug in every state.",
+"From 1850 to 1942, marijuana was listed in the United States Pharmacopoeia as a useful medicine for nausea, rheumatism, and labor pains and could be purchased from pharmacies and general stores.",
+"The last four presidents of the U.S, including Barack Obama, have all admitted to smoking cannabis.",
+"Since Nixon declared the “War On Drugs” in 1971, over a trillion dollars have been spent on it. It takes the average person under an hour to find drugs in a new city.",
+"A recent Gallup Poll concluded that 52% of Americans now favor all out legalization. The other 48% are packing their bongs. And 72% of Americans view the War on Drugs as a waste of government resources.",
+"The first two drafts of the United States Declaration of Independence were written on hemp paper.Before its ban, hemp was a common cash crop for family farms in early America.",
+"About one-fourth of America’s population has tried marijuana at least once. The rest are lying.",
+"A recent study proved that cannabis aids both lung and breast cancer-and does not cause any form of cancer. It only cures.",
+"Studies have proven that the high from cannabis is very comparable to that of a runners high.",
+"The first recorded use of marijuana as a medicinal drug occurred in 2737 B.C. by Chinese emperor Shen Nung. The emperor lauded the drug as a miracle cure for rheumatism and gout.",
+"There are over 200 slang terms for marijuana in the popular vernacular. Illegal Toxin is not one of them.",
+"Just under 40% of high school students in the U.S. report using marijuana at least once in their life, and 20% report using it regularly.",
+"The sale of bongs and paraphernalia is now illegal in Florida. The same state in which self defense with a firearm is legal.",
+"Weed is the most frequently used illegal drug in the United States. And the world.",
+"The growth, sale and consumption of cannabis is not regulated by the North Korean government or classified as a drug.",
+"Marijuana is used to fight other drug addictions-most recently, in Bogata Colombia.",
+"Accident studies have found that drivers who test positive for marijuana often show no signs of impairment, and in some instances even may drive more safely.",
+"Marijuana is not physically addictive.",
+"Over 50 million Americans smoke cannabis on a regular basis-while 1 in 10 teens smoke it more than 20 times a month. ",
+"Health studies have proven there are no long-term health detriments from marijuana use-only benefits. And a little short term memory loss.",
+"Cigarettes Kill 443,000 people a year-in the United States Alone. Vending machines kill 10 people a year. That’s 443,010 more than cannabis has ever killed.",
+"The NBA does not test athletes for marijuana use in the offseason.",
+"An estimated amount of over 800,000 people are arrested for marijuana each year, most of which are for simple possession.",
+"An NFL lineman estimated that 50% of the league smokes marijuana on a regular basis.",
+" Despite these facts, Marijuana remains federally illegal. BUT NOT FOR LONG…"];
  
-Funbot.misc.dogfact = [
-"Three dogs (from First Class cabins!) survived the sinking of the Titanic – two Pomeranians and one Pekingese.",
-"It’s rumored that, at the end of the Beatles song, “A Day in the Life,” Paul McCartney recorded an ultrasonic whistle, audible only to dogs, just for his Shetland sheepdog.",
-"Puppies have 28 teeth and normal adult dogs have 42.",
-"Dogs chase their tails for a variety of reasons: curiosity, exercise, anxiety, predatory instinct or, they might have fleas! If your dog is chasing his tail excessively, talk with your vet.",
-"Dalmatian puppies are pure white when they are born and develop their spots as they grow older.",
-"Dogs and humans have the same type of slow wave sleep (SWS) and rapid eye movement (REM) and during this REM stage dogs can dream. The twitching and paw movements that occur during their sleep are signs that your pet is dreaming",
-"Dogs’ eyes contain a special membrane, called the tapetum lucidum, which allows them to see in the dark.",
-"A large breed dog’s resting heart beats between 60 and 100 times per minute, and a small dog breed’s heart beats between 100-140. Comparatively, a resting human heart beats 60-100 times per minute.",
-"According to a Petside.com - Press poll, 72% of dog owners believe their dog can detect when stormy weather is on the way.",
-"A dog’s normal temperature is between 101 and 102.5 degrees Fahrenheit.",
-"Unlike humans who sweat everywhere, dogs only sweat through the pads of their feet.",
-"Dogs have three eyelids, an upper lid, a lower lid and the third lid, called a nictitating membrane or “haw,” which helps keep the eye moist and protected.",
-"Americans love dogs! 62% of U.S. households own a pet, which equates to 72.9 million homes",
-"45% of dogs sleep in their owner’s bed (we’re pretty sure a large percentage also hogs the blankets!)",
-"Why are dogs’ noses so wet? Dogs’ noses secrete a thin layer of mucous that helps them absorb scent. They then lick their noses to sample the scent through their mouth.",
-"Dogs have about 1,700 taste buds. Humans have approximately 9,000 and cats have around 473.",
-"A Dog’s sense of smell is 10,000 – 100,000 times more acute as that of humans.",
-"It’s a myth that dogs only see in black and white. In fact, it’s believed that dogs see primarily in blue, greenish-yellow, yellow and various shades of gray.",
-"Sound frequency is measured in Hertz (Hz). The higher the Hertz, the higher-pitched the sound. Dogs hear best at 8,000 Hz, while humans hear best at around 2,000 Hz.",
-"Dogs’ ears are extremely expressive. It’s no wonder! There are more than a dozen separate muscles that control a dog’s ear movements.",
-"While the Chow Chow dogs are well known for their distinctive blue-black tongues, they’re actually born with pink tongues. They turn blue-black at 8-10 weeks of age.",
-"When dogs kick after going to the bathroom, they are using the scent glands on their paws to further mark their territory.",
-"Dogs curl up in a ball when they sleep due to an age-old instinct to keep themselves warm and protect their abdomen and vital organs from predators.",
-"Dogs are capable of understanding up to 250 words and gestures, can count up to five and can perform simple mathematical calculations. The average dog is as intelligent as a two-year-old child.",
-"Some stray Russian dogs have figured out how to use the subway system in order to travel to more populated areas in search of food.",
-"Dogs don’t enjoy being hugged as much as humans and other primates.",
+Funbot.misc.feel = [
+"What you must understand about me is that I’m a deeply unhappy bot.",
+"I didn't want to wake up. I was having a much better time asleep. And that's really sad. It was almost like a reverse nightmare, like when you wake up from a nightmare you're so relieved. I woke up into a nightmare.",
+"The longer and more carefully we look at a funny story, the sadder it becomes.",
+"“Why do beautiful songs make you sad?' 'Because they aren't true.' 'Never?' 'Nothing is beautiful and true.” ",
+"there are two types of people in the world: those who prefer to be sad among others, and those who prefer to be sad alone.",
+"Tears shed for another person are not a sign of weakness. They are a sign of a pure heart.",
+"Tears are words that need to be written",
+"There is no point treating a depressed person as though she were just feeling sad, saying, 'There now, hang on, you'll get over it.' Sadness is more or less like a head cold- with patience, it passes. Depression is like cancer.",
+"I'm lonely. And I'm lonely in some horribly deep way and for a flash of an instant, I can see just how lonely, and how deep this feeling runs. And it scares the shit out of me to be this lonely because it seems catastrophic.",
+"I can't eat and I can't sleep. I'm not doing well in terms of being a functional human, you know?",
+"Give sorrow words; the grief that does not speak knits up the o-er wrought heart and bids it break.",
+"I am in that temper that if I were under water I would scarcely kick to come to the top.",
+"I did not know how to reach him, how to catch up with him... The land of tears is so mysterious.",
+"The cure for anything is salt water - tears, sweat, or the sea.",
+"Sometimes you weren't supposed to share pain. Sometimes it was best just to deal with it alone.",
 "Two stray dogs in Afghanistan saved 50 American soliders. A Facebook group raised $21,000 to bring the dogs back to the US and reunite them with the soldiers.",
-"Service dogs are trained to know when they are on duty. When their harness is on, they know it’s business time. When you take it off, the pups immediately become playful and energetic.",
-"Tiger Woods stuttered as a child and used to talk to his dog until he fell asleep in an effort to get rid of it.",
-"Seeing eye dogs pee and poo on command so that their owners can clean up after them."];
+"Even a fool recognizes that there is great sadness in a bucket of tears. But only a wise man thinks to conserve water and use that bucket to wash his car.",
+"I saw the world in black and white instead of the vibrant colours and shades I knew existed.",
+"It's OK not to be OK"];
  
 Funbot.misc.fortune = [
 " There is a true and sincere friendship between you and your friends.",
@@ -430,7 +401,7 @@ function chatMe(msg)
                         if(typeof command[1] == "undefined"){
                             API.sendChat(".{commands} Mention is included!");
                         setTimeout(function(){
-                           API.sendChat("reward | flipcoin | catfact | dogfact | hug | 8ball | fortune | songlink | download | help | whywoot | whywoot | props | votes | woot | meh | skip | say | version | userstats | mystats | source | status");
+                           API.sendChat("reward | flipcoin | weedfact | feel | hug | 8ball | fortune | songlink | download | help | whywoot | whywoot | props | votes | woot | meh | skip | say | version | userstats | mystats | source | status");
                         }, 650);
                         }else if(command[1].indexOf("@") > -1){
                             API.sendChat(command[1]+" My commands: reward | flipcoin | catfact | dogfact | hug | 8ball | fortune | songlink | download | help | whywoot | whywoot | props | votes | woot | meh | skip | say | version | userstats | mystats | source | status");
@@ -524,7 +495,7 @@ function chatMe(msg)
                 case "woot":
                         if(API.getUser(fromID).permission > 1 || Funbot.admins.indexOf(fromID) > -1){
                         if(typeof command[1] === "undefined"){
-                           API.sendChat("One woot coming up!");
+                           API.sendChat("dope!");
                         setTimeout(function(){
                            document.getElementById("woot").click()
                         }, 650);
@@ -537,7 +508,7 @@ function chatMe(msg)
                 case "meh":
                         if(API.getUser(fromID).permission > 1 || Funbot.admins.indexOf(fromID) > -1){
                         if(typeof command[1] === "undefined"){
-                           API.sendChat("Bummer, A meh has been requested!!");
+                           API.sendChat("this fucking sucks!");
                         setTimeout(function(){
                            document.getElementById("meh").click()
                         }, 650);
@@ -936,30 +907,30 @@ function chatMe(msg)
                         }
                         break;
  
-                 case "dogfact":
+                 case "feel":
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomDogfact = Math.floor(Math.random() * Funbot.misc.dogfact.length);
+                            var randomDogfact = Math.floor(Math.random() * Funbot.misc.feel.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.dogfact[randomDogfact]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feel[randomfeel]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.dogfact[randomDogfact]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feel[randomfeel]);
                                     break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
-                            var randomDogfact = Math.floor(Math.random() * Funbot.misc.dogfact.length);
+                            var randomfeel = Math.floor(Math.random() * Funbot.misc.feel.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.dogfact[randomdogfact]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feel[randomfeel]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.dogfact[randomDogfact]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feel[randomfeel]);
                                     break;
                            }
                         }
@@ -969,30 +940,30 @@ function chatMe(msg)
                         }
                         break;
                        
-                    case "catfact":
+                    case "weedfact":
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomCatfact = Math.floor(Math.random() * Funbot.misc.catfact.length);
+                            var randomweedfact = Math.floor(Math.random() * Funbot.misc.weedfact.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.catfact[randomCatfact]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.weedfact[randomweedfact]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.catfact[randomCatfact]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.weedfact[randomweedfact]);
                                     break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
-                            var randomCatfact = Math.floor(Math.random() * Funbot.misc.catfact.length);
+                            var randomweedfact = Math.floor(Math.random() * Funbot.misc.weedfact.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.catfact[randomCatfact]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.weedfact[randomweedfact]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.catfact[randomCatfact]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.catfact[randomweedfact]);
                                     break;
                            }
                         }
