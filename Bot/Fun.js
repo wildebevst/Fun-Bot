@@ -171,7 +171,7 @@ Funbot.misc.weedfact = [
 "An NFL lineman estimated that 50% of the league smokes marijuana on a regular basis.",
 " Despite these facts, Marijuana remains federally illegal. BUT NOT FOR LONG…"];
  
-Funbot.misc.feel = [
+Funbot.misc.feelsad = [
 "What you must understand about me is that I’m a deeply unhappy bot.",
 "I didn't want to wake up. I was having a much better time asleep. And that's really sad. It was almost like a reverse nightmare, like when you wake up from a nightmare you're so relieved. I woke up into a nightmare.",
 "The longer and more carefully we look at a funny story, the sadder it becomes.",
@@ -277,7 +277,7 @@ $('#woot').click();
  
 function UserJoin(user)
 {
-var JoinMsg = ["@user has joined!","welcome @user!","Hey there @user!","Glad you came by @user"];
+var JoinMsg = ["@user has joined!","Welcome @user!","Aye @user!","Glad you came by @user"];
 r = Math.floor(Math.random() * JoinMsg.length);
 API.sendChat(JoinMsg[r].replace("user", user.username));
 }
@@ -401,10 +401,10 @@ function chatMe(msg)
                         if(typeof command[1] == "undefined"){
                             API.sendChat(".{commands} Mention is included!");
                         setTimeout(function(){
-                           API.sendChat("reward | flipcoin | weedfact | feel | hug | 8ball | fortune | songlink | download | help | whywoot | whywoot | props | votes | woot | meh | skip | say | version | userstats | mystats | source | status");
+                           API.sendChat("reward | flipcoin | weedfact | feelsad | hug | 8ball | fortune | songlink | download | help | whywoot | whywoot | props | votes | woot | meh | skip | say | version | userstats | mystats | source | status");
                         }, 650);
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" My commands: reward | flipcoin | catfact | dogfact | hug | 8ball | fortune | songlink | download | help | whywoot | whywoot | props | votes | woot | meh | skip | say | version | userstats | mystats | source | status");
+                            API.sendChat(command[1]+" My commands: reward | flipcoin | weedfact | feelsad | hug | 8ball | fortune | songlink | download | help | whywoot | whywoot | props | votes | woot | meh | skip | say | version | userstats | mystats | source | status");
                             API.sendChat(".{commands} Mention is included!");
                         }
                         break;
@@ -907,30 +907,30 @@ function chatMe(msg)
                         }
                         break;
  
-                 case "feel":
+                 case "feelsad":
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomDogfact = Math.floor(Math.random() * Funbot.misc.feel.length);
+                            var randomfeelsad = Math.floor(Math.random() * Funbot.misc.feelsad.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feel[randomfeel]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feel[randomfeelsad]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feel[randomfeel]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feel[randomfeelsad]);
                                     break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
-                            var randomfeel = Math.floor(Math.random() * Funbot.misc.feel.length);
+                            var randomfeelsad = Math.floor(Math.random() * Funbot.misc.feel.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feel[randomfeel]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feelsad[randomfeelsad]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feel[randomfeel]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feelsad[randomfeelsad]);
                                     break;
                            }
                         }
