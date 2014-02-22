@@ -915,15 +915,15 @@ function chatMe(msg)
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feel[randomfeelsad]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feelsad[randomfeelsad]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feel[randomfeelsad]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.feelsad[randomfeelsad]);
                                     break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
-                            var randomfeelsad = Math.floor(Math.random() * Funbot.misc.feel.length);
+                            var randomfeelsad = Math.floor(Math.random() * Funbot.misc.feelsad.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
@@ -932,6 +932,13 @@ function chatMe(msg)
                                 case 1:
                                     API.sendChat("@" + data.from + ", "+ Funbot.misc.feelsad[randomfeelsad]);
                                     break;
+                           }
+                        }
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Funbot.admins.indexOf(fromID) > -1){
+                            Funbot.misc.ready = false;
+                            setTimeout(function(){ Funbot.misc.ready = true; }, Funbot.settings.cooldown * 1000);
+                        }
+                        break;
                            }
                         }
                        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Funbot.admins.indexOf(fromID) > -1){
@@ -963,7 +970,7 @@ function chatMe(msg)
                                     API.sendChat("@" + data.from + ", "+ Funbot.misc.weedfact[randomweedfact]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.catfact[randomweedfact]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.weedfact[randomweedfact]);
                                     break;
                            }
                         }
