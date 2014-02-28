@@ -184,7 +184,7 @@ Funbot.misc.feelsad = [
 "“Mental illness is so much more complicated than any pill that any mortal could invent.",
 "In the meantime, I could withdraw to my room, could hide and sleep as if I were dead.",
 "Depression is like a bruise that never goes away. A bruise in your mind. You just got to be careful not to touch it where it hurts. It's always there, though",
-"Depression on my left, Loneliness on my right. They don't need to show me thier badges. I know these guys very well."
+"Depression on my left, Loneliness on my right. They don't need to show me thier badges. I know these guys very well.",
 "There is no point treating a depressed person as though she were just feeling sad, saying, 'There now, hang on, you'll get over it.' Sadness is more or less like a head cold- with patience, it passes. Depression is like cancer.",
 "I'm lonely. And I'm lonely in some horribly deep way and for a flash of an instant, I can see just how lonely, and how deep this feeling runs. And it scares the shit out of me to be this lonely because it seems catastrophic.",
 "I can't eat and I can't sleep. I'm not doing well in terms of being a functional human, you know?",
