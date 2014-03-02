@@ -287,13 +287,6 @@ API.on(API.DJ_ADVANCE, DJ_ADVANCE);
 function woot(){
 $('#woot').click();
 }
- 
-function UserJoin(user)
-{
-var JoinMsg = ["@user has joined!","Welcome @user!","Aye @user!","Glad you came by @user"];
-r = Math.floor(Math.random() * JoinMsg.length);
-API.sendChat(JoinMsg[r].replace("user", user.username));
-}
 
 function djAdvanceEvent(data){
     setTimeout(function(){ botMethods.data }, 500);
