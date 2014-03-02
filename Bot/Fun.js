@@ -66,14 +66,14 @@ Funbot.filters.beggerWords = new Array();
 Funbot.filters.commandWords = new Array();
 
 // Bot's settings
-Funbot.settings.maxLength = 10; 
+Funbot.settings.maxLength = 999999; 
 Funbot.settings.cooldown = 10; 
 Funbot.settings.staffMeansAccess = true;
 Funbot.settings.historyFilter = true;
 Funbot.settings.beggerFilter = true;
 Funbot.settings.commandFilter = true;
 Funbot.settings.interactive = true;
-Funbot.settings.ruleSkip = true;
+Funbot.settings.ruleSkip = false;
 Funbot.settings.removedFilter = true;
 
 // Admins of the bot
@@ -103,7 +103,7 @@ Funbot.filters.commandWords = ["!status",".changelog",".say",".weedfact",".feel"
 
 // Fun misc
 Funbot.misc.tacos = ["blunt","kush","Chemo","Locoweed","marijuana","Ganja"];
-Funbot.misc.cookie = ["a chocolate chip cookie", "a sugar cookie", "an oatmeal raisin cookie", "a 'special' brownie", "an animal cracker", "a scooby snack", "a blueberry muffin", "a cupcake","Strawberry Sunday", "Chocolate Chip Icecream Cone", "Cookie Dough Triple Scoop ", "Mint Chocolate Chip Icecream Cone", "Chocolate Icecream Sunday", "Banana Split with Whipped Cream", "Vanilla Icecream Cone with Sprinkles ", "Bubblegum Flavored Popcicle"];
+Funbot.misc.cookie = ["a fat blunt", "an oz of blue dream", "a bottle of cocunut rum", "a 'special' brownie", "a gram of dabs", "a scooby snack", "a blue haze cupcake", "a joint","a bong", "Chocolate Chip Icecream Cone",];
 Funbot.misc.ball = [
 " It is certain",
 " It is decidedly so",
@@ -373,13 +373,13 @@ botMethods.cleanString = function(string){
     var songLen = (parseInt(songLenParts[0].substring(1)) * 60) + parseInt(songLenParts[1]);
     if (songLen >= songBoundary)
     {
-        window.setTimeout(skipLongSong, 1000 * songBoundary);
+        window.setTimeout(skipLongSong, 100000 * songBoundary);
     }
 }
  
 function skipLongSong()
 {
-    chatMe("Skipping song because it has exceeded the song limit (" + (songBoundary / 60) + " minutes.)");
+    chatMe("Skipping song because it has exceeded the song limit (" + (songBoundary / 10000) + " minutes.)");
     API.moderateForceSkip();
 }
  
