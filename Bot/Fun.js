@@ -54,19 +54,14 @@ Funbot.misc.ready = true;
 Funbot.misc.lockSkipping = false;
 Funbot.misc.lockSkipped = "0";
 Funbot.misc.tacos = new Array();
-var songBoundary = 60 * 7;
 var announcementTick = 60 * 7;
 var lastAnnouncement = 0;
-
-joined = new Date().getTime();
- 
-cancel = false;
 
 Funbot.filters.beggerWords = new Array();
 Funbot.filters.commandWords = new Array();
 
 // Bot's settings
-Funbot.settings.maxLength = 999999; 
+Funbot.settings.maxLength = 60; 
 Funbot.settings.cooldown = 10; 
 Funbot.settings.staffMeansAccess = true;
 Funbot.settings.historyFilter = true;
@@ -82,7 +77,6 @@ Funbot.admins = ["50aeaeb6c3b97a2cb4c25bd2"];
 // Random announcements.
 var announcements = 
 [""];
-
 
 // Keywords of blocked songs
 var blockedSongs = [
@@ -276,7 +270,7 @@ Funbot.pubVars.command = false;
  
 Array.prototype.remove=function(){var c,f=arguments,d=f.length,e;while(d&&this.length){c=f[--d];while((e=this.indexOf(c))!==-1){this.splice(e,1)}}return this};
 if(window.location.hostname === "plug.dj"){
-window.setInterval(sendAnnouncement, 1000 * announcementTick);
+window.setInterval(sendAnnouncement, 5 * announcementTick);
 API.on(API.DJ_ADVANCE, djAdvanceEvent);
 API.on(API.DJ_ADVANCE, listener);
 API.on(API.DJ_ADVANCE, woot);
