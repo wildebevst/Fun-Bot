@@ -283,20 +283,10 @@ API.on(API.DJ_ADVANCE, woot);
 API.on(API.USER_JOIN, UserJoin);
 API.on(API.DJ_ADVANCE, DJ_ADVANCE);
 
-
 function woot(){
 $('#woot').click();
 }
 
-function djAdvanceEvent(data){
-    setTimeout(function(){ botMethods.data }, 500);
-}
-botMethods.skip = function(){
-    setTimeout(function(){
-        if(!cancel) API.moderateForceSkip();
-    }, 3500);
-};
- 
 botMethods.load = function(){
     toSave = JSON.parse(localStorage.getItem("FunbotSave"));
     Funbot.settings = toSave.settings;
