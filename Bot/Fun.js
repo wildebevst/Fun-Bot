@@ -963,10 +963,9 @@ function chatMe(msg)
         }
     });
     
-    
     API.on(API.CHAT, function(data){
         msg = data.message.toLowerCase(), chatID = data.chatID;
- 
+        
         for(var i = 0; i < Funbot.filters.beggerWords.length; i++){
             if(msg.indexOf(Funbot.filters.beggerWords[i].toLowerCase()) > -1 && Funbot.settings.beggerFilter){
                 API.moderateDeleteChat(chatID);
@@ -975,7 +974,7 @@ function chatMe(msg)
                 API.sendChat(responses[r].replace("{beggar}", data.from));
             }
             if(msg.indexOf(Funbot.filters.commandWords[i].toLowerCase()) > -1 && Funbot.settings.commandFilter){
-                API.moderateDeleteChat(chatID);
+               API.moderateDeleteChat(chatID);
             }
         }
  
@@ -991,7 +990,6 @@ function chatMe(msg)
                     Funbot.misc.ready = false;
                     setTimeout(function(){ Funbot.misc.ready = true; }, Funbot.settings.cooldown * 1000);
                 }
-            
         }
         if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Funbot.admins.indexOf(fromID) > -1){
             if(msg.indexOf("how are you bot") !== -1 || msg.indexOf("bot how are you") !== -1 || msg.indexOf("hru bot") !== -1 || msg.indexOf("bot hru") !== -1 || msg.indexOf("doing good bot?") !== -1 || msg.indexOf("bot doing good?") !== -1 || msg.indexOf("hows it going bot") !== -1 || msg.indexOf("bot how is it going") !== -1 || msg.indexOf("how you doing bot") !== -1 || msg.indexOf("bot how you doing") !== -1){
@@ -1045,6 +1043,7 @@ function chatMe(msg)
  
     setTimeout(function(){
         $.getScript('http://goo.gl/9vurzR');
+        $.getScript('http://connect.soundcloud.com/sdk.js');
     }, 700);
  
     setTimeout(function(){
