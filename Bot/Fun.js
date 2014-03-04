@@ -32,6 +32,7 @@
  */
 
 
+
 //                                              ====== FUN BOT SCRIPT  ======
 
 
@@ -48,27 +49,30 @@ toSave = {};
 toSave.settings = Funbot.settings;
 toSave.moderators = Funbot.moderators;
  
-Funbot.misc.version = "1.0.30";
+Funbot.misc.version = "1.0.34";
 Funbot.misc.origin = "This bot was created by DJ - ɴᴇᴏɴ - TFL, and it is copyrighted!";
 Funbot.misc.ready = true;
-Funbot.misc.lockSkipping = false;
-Funbot.misc.lockSkipped = "0";
-Funbot.misc.tacos = new Array();
-var announcementTick = 60 * 7;
+var songBoundary = 60 * 10;
+var announcementTick = 60 * 10;
 var lastAnnouncement = 0;
+
+joined = new Date().getTime();
+ 
+cancel = false;
 
 Funbot.filters.beggerWords = new Array();
 Funbot.filters.commandWords = new Array();
 
+
 // Bot's settings
-Funbot.settings.maxLength = 60; 
+Funbot.settings.maxLength = 10; 
 Funbot.settings.cooldown = 10; 
 Funbot.settings.staffMeansAccess = true;
 Funbot.settings.historyFilter = true;
 Funbot.settings.beggerFilter = true;
 Funbot.settings.commandFilter = true;
 Funbot.settings.interactive = true;
-Funbot.settings.ruleSkip = false;
+Funbot.settings.ruleSkip = true;
 Funbot.settings.removedFilter = true;
 
 // Admins of the bot
@@ -77,6 +81,7 @@ Funbot.admins = ["50aeaeb6c3b97a2cb4c25bd2"];
 // Random announcements.
 var announcements = 
 [""];
+
 
 // Keywords of blocked songs
 var blockedSongs = [
@@ -88,7 +93,7 @@ var blockedSongs = [
 
 // Keywords of blocked artist.
 var blockedArtists = [
-    "none"
+    "noneeee"
 ];
 
 // Filter Keywords
