@@ -102,7 +102,7 @@ Funbot.filters.commandWords = ["!status",".changelog",".say",".weedfact",".feel"
 
 // Fun misc
 Funbot.misc.tacos = ["blunt","kush","Chemo","Locoweed","marijuana","Ganja"];
-Funbot.misc.cookie = ["a fat blunt", "an oz of blue dream", "a bottle of cocunut rum", "a 'special' brownie", "a gram of dabs", "a scooby snack", "a blue haze cupcake", "a joint","a bong", "Chocolate Chip Icecream Cone",];
+Funbot.misc.cookie = ["a fat blunt", "an oz of blue dream", "a bottle of cocunut rum", "a 'special' brownie", "a gram of dabs", "a scooby snack", "a blue haze cupcake", "a joint","a bong", "Chocolate Chip Icecream Cone"];
 Funbot.misc.ball = [
 " It is certain",
 " It is decidedly so",
