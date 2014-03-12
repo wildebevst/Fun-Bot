@@ -175,7 +175,7 @@ Funbot.misc.weedfact = [
 "An NFL lineman estimated that 50% of the league smokes marijuana on a regular basis.",
 " Despite these facts, Marijuana remains federally illegal. BUT NOT FOR LONG…"];
  
-Funbot.misc.weedfact = [
+Funbot.misc.weed = [
 "Puff Puff Pass",
 "Just finished the joint!",
 "Fuck this blunt is fat",
