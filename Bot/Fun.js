@@ -49,7 +49,7 @@ toSave = {};
 toSave.settings = Funbot.settings;
 toSave.moderators = Funbot.moderators;
  
-Funbot.misc.version = "1.0.34";
+Funbot.misc.version = "1.0.49";
 Funbot.misc.origin = "This bot was created by DJ - ɴᴇᴏɴ - TFL, and it is copyrighted!";
 Funbot.misc.ready = true;
 var songBoundary = 60 * 10;
@@ -58,11 +58,9 @@ var lastAnnouncement = 0;
 
 joined = new Date().getTime();
  
-cancel = false;
-
+// Filterng Chat
 Funbot.filters.beggerWords = new Array();
 Funbot.filters.commandWords = new Array();
-
 
 // Bot's settings
 Funbot.settings.maxLength = 10; 
@@ -75,21 +73,28 @@ Funbot.settings.interactive = true;
 Funbot.settings.ruleSkip = true;
 Funbot.settings.removedFilter = true;
 
-// Admins of the bot
+// Admins ID
 Funbot.admins = ["50aeaeb6c3b97a2cb4c25bd2"];
 
 // Random announcements.
 var announcements = 
 [""];
 
-
 // Keywords of blocked songs
 var blockedSongs = [
+    "Rick Roll",
     "GANGNAM",
     "The Fox",
     "The Fox [Official music video HD]",
-    "10 hour"
+    "10 hour",
+    "Trololo"
 ];
+
+// Keywords of blocked artist.
+var blockedArtists = [
+    "none",
+];
+
 
 // Keywords of blocked artist.
 var blockedArtists = [
@@ -272,10 +277,62 @@ Funbot.misc.fortune = [
  
 Funbot.pubVars.skipOnExceed;
 Funbot.pubVars.command = false;
+ 
+Array.prototype.remove=function(){var c,f=arguments,d=f.length,e;while(d&&this.length){c=f[--d];while((e=this.indexOf(c))!==-1){this.splice(e,1)}}return this};
+if(window.location.hostname === "plug.dj"){window.setInterval(sendAnnouncement, 1000 * announcementTick);
+API.on(API.DJ_ADVANCE, djAdvanceEvent);
+API.on(API.DJ_ADVANCE, listener);
+API.on(API.DJ_ADVANCE, woot);
+API.on(API.USER_JOIN, UserJoin);
+API.on(API.DJ_ADVANCE, DJ_ADVANCE);
+$('#playback').hide();
+$('#audience').hide();
+API.setVolume(0);
 
 function woot(){
 $('#woot').click();
-}
+};
+ 
+function UserJoin(user)
+{
+var JoinMsg = ["@user has joined!","welcome @user!","Hey there @user!","Glad you came by @user"];
+r = Math.floor(Math.random() * JoinMsg.length);
+API.sendChat(JoinMsg[r].replace("user", user.username));
+};
+
+function djAdvanceEvent(data){
+    setTimeout(function(){ botMethods.data }, 500);
+};
+
+Funbot.skip = function(){
+API.moderateForceSkip();
+};
+
+Funbot.unhook = function(){
+API.off(API.DJ_ADVANCE, djAdvanceEvent);
+API.off(API.DJ_ADVANCE, listener);
+API.off(API.DJ_ADVANCE, woot);
+API.off(API.USER_JOIN, UserJoin);
+API.off(API.DJ_ADVANCE, DJ_ADVANCE);
+API.off(API.USER_JOIN);
+API.off(API.USER_LEAVE);
+API.off(API.USER_SKIP);
+API.off(API.USER_FAN);
+API.off(API.CURATE_UPDATE);
+API.off(API.DJ_ADVANCE);
+API.off(API.VOTE_UPDATE);
+API.off(API.CHAT);
+$('#playback').show();
+$('#audience').show();
+API.setVolume(15);
+};
+
+Funbot.hook = function(){
+(function(){$.getScript('http://goo.gl/MMsPi1');
+$('#playback').hide();
+$('#audience').hide();
+API.setVolume(0);}());
+};
 
 botMethods.load = function(){
     toSave = JSON.parse(localStorage.getItem("FunbotSave"));
@@ -319,7 +376,7 @@ botMethods.getID = function(username){
 };
  
 botMethods.cleanString = function(string){
-    return string.replace(/&#39;/g, "'").replace(/&amp;/g, "&").replace(/&#34;/g, "\"").replace(/&#59;/g, ";").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+    return string.replace("&#39;", "'").replace(/&amp;/g, "&").replace(/&#34;/g, "\"").replace(/&#59;/g, ";").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
 };
    
     function listener(data)
@@ -336,7 +393,7 @@ botMethods.cleanString = function(string){
         if (title.indexOf(blockedSongs[i]) != -1 || author.indexOf(blockedArtists[i]) != -1)
         {
             API.moderateForceSkip();
-            chatMe("I Skipped: \"" + title + "\" because it is blocked.");
+            chatMe("I Skipped: "+ title +" because it is blocked.");
             return;
         }
     }
@@ -346,13 +403,13 @@ botMethods.cleanString = function(string){
     var songLen = (parseInt(songLenParts[0].substring(1)) * 60) + parseInt(songLenParts[1]);
     if (songLen >= songBoundary)
     {
-        window.setTimeout(skipLongSong, 100000 * songBoundary);
+        window.setTimeout(skipLongSong, 1000 * songBoundary);
     }
 }
  
 function skipLongSong()
 {
-    chatMe("Skipping song because it has exceeded the song limit (" + (songBoundary / 10000) + " minutes.)");
+    chatMe("Skipping song because it has exceeded the song limit (" + (songBoundary / 60) + " minutes.)");
     API.moderateForceSkip();
 }
  
