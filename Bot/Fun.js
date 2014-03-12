@@ -180,6 +180,9 @@ Funbot.misc.weed = [
 "Just finished the joint!",
 "Fuck this blunt is fat",
 "Back off this shit is mine",
+"This bowl will put us to sleep",
+"Dab or Die",
+"I have to smoke every hour or i stop functioning",
 "This shit is loud af!",
 "Ill pass the bong to you after i finish the bowl in 1hit"];
 
