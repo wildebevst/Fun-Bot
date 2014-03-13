@@ -85,6 +85,7 @@ var blockedSongs = [
     "Rick Roll",
     "GANGNAM",
     "The Fox",
+    "I got Bitches"
     "The Fox [Official music video HD]",
     "10 hour",
     "Trololo"
