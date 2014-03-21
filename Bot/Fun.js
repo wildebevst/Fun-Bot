@@ -52,7 +52,7 @@ toSave.moderators = Funbot.moderators;
 Funbot.misc.version = "1.0.49";
 Funbot.misc.origin = "This bot was created by DJ - ɴᴇᴏɴ - TFL, and it is copyrighted!";
 Funbot.misc.ready = true;
-var songBoundary = 60 * 10;
+var songBoundary = 60 * 11;
 var announcementTick = 60 * 10;
 var lastAnnouncement = 0;
 
