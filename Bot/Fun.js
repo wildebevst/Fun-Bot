@@ -1119,7 +1119,7 @@ function chatMe(msg)
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randombased = Math.floor(Math.random() * Funbot.misc.weed.length);
+                            var randombased = Math.floor(Math.random() * Funbot.misc.based.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
@@ -1135,10 +1135,10 @@ function chatMe(msg)
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.weed[randombased]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.based[randombased]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.weed[randombased]);
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.based[randombased]);
                                     break;
                            }
                         }
