@@ -708,8 +708,6 @@ function chatMe(msg)
                         }
                         break;  
                 
-                
-                        
                    case "author":
                    case "authors":
                    case "creator":
@@ -1005,8 +1003,8 @@ function chatMe(msg)
                         }
                         break;
                         
-                        
-                    case "drink":
+                   
+                   case "drink":
                         if(typeof command[1] == "@"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
