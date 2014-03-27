@@ -1010,7 +1010,7 @@ function chatMe(msg)
                         if(typeof command[1] == "@"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomSentence = Math.floor(Math.random() * 3);
+                            var randomSentence = Math.floor(Math.random() * 7);
                             switch(randomSentence){
                                 case 0:
                                     API.sendChat("Drinks? Forget that!");
@@ -1044,7 +1044,7 @@ function chatMe(msg)
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomSentence = Math.floor(Math.random() * 3);
+                            var randomSentence = Math.floor(Math.random() * 7);
                             switch(randomSentence){
                                 case 0:
                                     API.sendChat("Drinks? Forget that!");
