@@ -184,7 +184,51 @@ Funbot.misc.weed = [
 "Dab or Die",
 "I have to smoke every hour or i stop functioning",
 "This shit is loud af!",
-"Ill pass the bong to you after i finish the bowl in 1hit"];
+"Ill pass the bong to you after i finish the bowl in 1hit",
+"faded nigga",
+"Is it rude to call a jew baked?",
+"Shut up im trying to roll",
+"No mom you cant have more weed",
+"Welcome to your local drug dealing bot, todays specials is Sad~Dank at 5$ per gram http://content.animalnewyork.com/wp-content/uploads/sad-bag-weed.jpg",
+"Just bought a new bubbler today",
+"all i have is this gpen",
+"I bet i smoke more in one day than you do in a year"];
+
+Funbot.misc.based = [
+"#TYBG",
+"I got Bitches ~ Lil B",
+"When people see you have your foot in the door with what you love, everyone wants to be your friend. - Lil B",
+"I love your life and I love you being alive. - Lil B",
+"I'm not guna let anything take the love from my heart, the love of life and spreading peace and positive, thank you earth I'm alive. - Lil B",
+"My people, you gota think before you move, you gota speak before you cry, you gota live before you die. - Lil B",
+"She was like OWWW, I was like OWW, I am like GOD, call me Bot god! - Lil B",
+"20 on my dick because I look like Miss America. - Lil B",
+"Put money on god and bust on him. - Lil B"
+"I'm just robbing like baskins. - Lil B",
+"It's OK to cry. - Lil B",
+"Yeah drake I fuckin feel ya, I was in the hood while you were shopping at whole foods. -Lil B",
+"The mind is so complex when your based. 32 levels. Welcome to my world. - Lil B",
+"Dirty everythang. You can't be half ass dirty you gotta be all the way, ya feel me? - Lil B",
+"Hoes suck my dick, and my dick touch her brain. - Lil B",
+"I won't eat a girl out, but my lawyers will! - Lil B",
+"10 on my dick cuz I look like patrick ramsey. - Lil B",
+"Everybody say that I'm a young ass bitch til I caught my first case now I'm a thug ass bitch. - Lil B",
+"Roll with the piece beside him not talkin bout the gun, but the peace inside him. - Lil B",
+"Fucked the bitch in her ass and the pussy squirted milk. - Lil B",
+"Yeah the niqqa rap but do he got bitches? Young Baselord and I look like Jesus. -- Lil B",
+"I'm so wet I should be in the Navy. - Lil B",
+"I ain't got no car, but i be driving bitches. - Lil B",
+"Feel me I'm in this bitch , man lookin like heidi montag swaggin. - Lil B",
+"My white girl fuck me good, interracial datin. My black girl suck my dick and she on probation. - Lil B",
+"Swag like I'm marrow, in my bones. Swag in my bones. Bone Marrow Swag. - Lil B",
+"The only time I went to class was when I was serving a detention. - Lil B",
+"I'm really waterfront on a bitch! - Lil B",
+"Word around town bitch imma nasty neighbor. - Lil  B",
+"Bitches suck my dick cuz I look like a Frenchmen. - Lil B",
+"I'm doin it for the youth, tryna set the right example feel me. - Lil B",
+"Nut on her lips and in her ass thats a creampie. Oh my God creampie. - Lil B",
+"Picked up my bitches, most of them foreign, hoes suck my dick when my day gets boring. - Lil B",
+"Shouts out to Palo Alto, bruh bruh got grapes there. _ Lil B"];
 
 Funbot.misc.feelsad = [
 "What you must understand about me is that I’m a deeply unhappy bot.",
@@ -455,10 +499,10 @@ function chatMe(msg)
                         if(typeof command[1] == "undefined"){
                             API.sendChat(".{commands} Mention is included!");
                         setTimeout(function(){
-                           API.sendChat("reward | flipcoin | weedfact | feelsad | weed | hug | 8ball | fortune | songlink | download | help | whywoot | whywoot | props | votes | woot | meh | skip | say | version | userstats | mystats | source | status");
+                           API.sendChat("reward | flipcoin | weedfact | based | feelsad | weed | hug | drink | 8ball | fortune | songlink | download | help | whywoot | whymeh | props | votes | woot | meh | skip | say | version | userstats | mystats | source | status");
                         }, 650);
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" My commands: reward | flipcoin | weedfact | feelsad | weed | hug | 8ball | fortune | songlink | download | help | whywoot | whywoot | props | votes | woot | meh | skip | say | version | userstats | mystats | source | status");
+                            API.sendChat(command[1]+" My commands: reward | flipcoin | weedfact | based | feelsad | weed | hug | drink | 8ball | fortune | songlink | download | help | whywoot | whymeh | props | votes | woot | meh | skip | say | version | userstats | mystats | source | status");
                             API.sendChat(".{commands} Mention is included!");
                         }
                         break;
@@ -961,6 +1005,83 @@ function chatMe(msg)
                         }
                         break;
                         
+                        
+                    case "drink":
+                        if(typeof command[1] == "@"){
+                            var crowd = API.getUsers();
+                            var randomUser = Math.floor(Math.random() * crowd.length);
+                            var randomSentence = Math.floor(Math.random() * 3);
+                            switch(randomSentence){
+                                case 0:
+                                    API.sendChat("Drinks? Forget that!");
+                                    setTimeout(function(){
+                                        API.sendChat("/me grabs @"+command[1]+"'s ass");
+                                    }, 650);
+                                    break;
+                                case 1:
+                                    API.sendChat("/me gives @"+command[1]+" a Hurricane Cocktail");
+                                    break;
+                                case 2:
+                                    API.sendChat("/me gives @"+command[1]+" a Frozen Margarita");
+                                    break;
+                                case 3:
+                                    API.sendChat("/me gives @"+command[1]+" a Pineapple Bomber");
+                                    break;
+                                case 4:
+                                    API.sendChat("/me gives @"+command[1]+" a Screwdriver");
+                                    break;
+                                case 5:
+                                    API.sendChat("/me gives @"+command[1]+" a Tequila Sunrise");
+                                    break;
+                                case 6:
+                                    API.sendChat("/me gives @"+command[1]+" a Rusty Nail");
+                                    break;
+                                case 7:
+                                    API.sendChat("/me gives @"+command[1]+" a Piña Colada");
+                                    break;
+                            }
+                        }else{
+                            if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
+                            var crowd = API.getUsers();
+                            var randomUser = Math.floor(Math.random() * crowd.length);
+                            var randomSentence = Math.floor(Math.random() * 3);
+                            switch(randomSentence){
+                                case 0:
+                                    API.sendChat("Drinks? Forget that!");
+                                    setTimeout(function(){
+                                        API.sendChat("/me grabs @"+command[1]+"'s ass");
+                                    }, 650);
+                                    break;
+                                case 1:
+                                    API.sendChat("/me gives @"+command[1]+" a French Daiquiri");
+                                    break;
+                                case 2:
+                                    API.sendChat("/me gives @"+command[1]+" a Pit Bull On Crack");
+                                    break;
+                                case 3:
+                                    API.sendChat("/me gives @"+command[1]+" an Alabama Slammer");
+                                    break;
+                                case 4:
+                                    API.sendChat("/me gives @"+command[1]+" a Jager Bomb");
+                                    break;
+                                case 5:
+                                    API.sendChat("/me gives @"+command[1]+" a Brave Bull");
+                                    break;
+                                case 6:
+                                    API.sendChat("/me gives @"+command[1]+" a Long Island Iced Tea");
+                                    break;
+                                case 7:
+                                    API.sendChat("/me gives @"+command[1]+" a White Gummy Bear");
+                                    break;
+                            }
+                        }
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Funbot.admins.indexOf(fromID) > -1){
+                            Funbot.misc.ready = false;
+                            setTimeout(function(){ Funbot.misc.ready = true; }, Funbot.settings.cooldown * 1000);
+                        }
+                        break;
+                        
+                        
                  case "weed":
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
@@ -985,6 +1106,39 @@ function chatMe(msg)
                                     break;
                                 case 1:
                                     API.sendChat("@" + data.from + ", "+ Funbot.misc.weed[randomweed]);
+                                    break;
+                           }
+                        }
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Funbot.admins.indexOf(fromID) > -1){
+                            Funbot.misc.ready = false;
+                            setTimeout(function(){ Funbot.misc.ready = true; }, Funbot.settings.cooldown * 1000);
+                        }
+                        break;
+                        
+                 case "based":
+                        if(typeof command[1] == "undefined"){
+                            var crowd = API.getUsers();
+                            var randomUser = Math.floor(Math.random() * crowd.length);
+                            var randombased = Math.floor(Math.random() * Funbot.misc.weed.length);
+                            var randomSentence = Math.floor(Math.random() * 1);
+                            switch(randomSentence){
+                                case 0:
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.based[randombased]);
+                                    break;
+                                case 1:
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.based[randombased]);
+                                    break;
+                            }
+                        }else{
+                            if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
+                            var randombased = Math.floor(Math.random() * Funbot.misc.based.length);
+                            var randomSentence = Math.floor(Math.random() * 1);
+                            switch(randomSentence){
+                                case 0:
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.weed[randombased]);
+                                    break;
+                                case 1:
+                                    API.sendChat("@" + data.from + ", "+ Funbot.misc.weed[randombased]);
                                     break;
                            }
                         }
