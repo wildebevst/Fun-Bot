@@ -192,7 +192,7 @@ Funbot.misc.weed = [
 "Is it rude to call a jew baked?",
 "Shut up im trying to roll",
 "No mom you cant have more weed",
-"Welcome to your local drug dealing bot, todays specials is Sad~Dank at 5$ per gram http://content.animalnewyork.com/wp-content/uploads/sad-bag-weed.jpg",
+"Welcome to your local drug dealing bot, todays specials is Sad~Dank at 5$ per gram",
 "Just bought a new bubbler today",
 "all i have is this gpen",
 "Kush so loud bitch up stairs calls the police",
