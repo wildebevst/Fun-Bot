@@ -52,7 +52,7 @@ toSave.moderators = Funbot.moderators;
 Funbot.misc.version = "1.0.49";
 Funbot.misc.origin = "This bot was created by DJ - ɴᴇᴏɴ - TFL, and it is copyrighted!";
 Funbot.misc.ready = true;
-var songBoundary = 60 * 11;
+var songBoundary = 60 * 10;
 var announcementTick = 60 * 10;
 var lastAnnouncement = 0;
 
@@ -103,7 +103,7 @@ var blockedArtists = [
 
 // Filter Keywords
 Funbot.filters.beggerWords = ["fanme","fan me","fan4fan","fan 4 fan","fan pls","fans please","need fan","more fan","fan back","give me fans","gimme fans"];
-Funbot.filters.commandWords = ["!status",".changelog",".say",".weedfact",".feel",".fortune",".songlink",".down",".join",".status",".tcf",".cf",".rules",".version",".test"];
+Funbot.filters.commandWords = ["!status",".based",".changelog",".say",".weedfact",".feel",".fortune",".songlink",".down",".join",".status",".tcf",".cf",".rules",".version",".test"];
 
 // Fun misc
 Funbot.misc.tacos = ["blunt","kush","Chemo","Locoweed","marijuana","Ganja"];
@@ -117,6 +117,7 @@ Funbot.misc.ball = [
 " As I see it yes",
 " Most likely",
 " Outlook good",
+" yes sir"'
 " Yes",
 " Signs point to yes :trollface:",
 " Reply hazy try again",
@@ -125,6 +126,7 @@ Funbot.misc.ball = [
 " Cannot predict now",
 " Concentrate and ask again",
 " Don't count on it",
+" Are you daft?",
 " My reply is no",
 " My sources say no",
 " Outlook not so good",
@@ -176,6 +178,7 @@ Funbot.misc.weedfact = [
 " Despite these facts, Marijuana remains federally illegal. BUT NOT FOR LONG…"];
  
 Funbot.misc.weed = [
+"Bout to slide into a kuch coma!",
 "Puff Puff Pass",
 "Just finished the joint!",
 "Fuck this blunt is fat",
@@ -192,6 +195,11 @@ Funbot.misc.weed = [
 "Welcome to your local drug dealing bot, todays specials is Sad~Dank at 5$ per gram http://content.animalnewyork.com/wp-content/uploads/sad-bag-weed.jpg",
 "Just bought a new bubbler today",
 "all i have is this gpen",
+"Kush so loud bitch up stairs calls the police",
+"15$ little man put that shit in my had",
+"Used to only smoke a gram a week, now we destroy that OZ as soon as the odor leaks",
+"1 min guys brb watering the plants",
+"Rolling the pain away sparking up for a better today",
 "I bet i smoke more in one day than you do in a year"];
 
 Funbot.misc.based = [
@@ -203,7 +211,7 @@ Funbot.misc.based = [
 "My people, you gota think before you move, you gota speak before you cry, you gota live before you die. - Lil B",
 "She was like OWWW, I was like OWW, I am like GOD, call me Bot god! - Lil B",
 "20 on my dick because I look like Miss America. - Lil B",
-"Put money on god and bust on him. - Lil B"
+"Put money on god and bust on him. - Lil B",
 "I'm just robbing like baskins. - Lil B",
 "It's OK to cry. - Lil B",
 "Yeah drake I fuckin feel ya, I was in the hood while you were shopping at whole foods. -Lil B",
@@ -228,7 +236,7 @@ Funbot.misc.based = [
 "I'm doin it for the youth, tryna set the right example feel me. - Lil B",
 "Nut on her lips and in her ass thats a creampie. Oh my God creampie. - Lil B",
 "Picked up my bitches, most of them foreign, hoes suck my dick when my day gets boring. - Lil B",
-"Shouts out to Palo Alto, bruh bruh got grapes there. _ Lil B"];
+"Shouts out to Palo Alto, bruh bruh got grapes there. - Lil B"];
 
 Funbot.misc.feelsad = [
 "What you must understand about me is that I’m a deeply unhappy bot.",
@@ -262,6 +270,14 @@ Funbot.misc.feelsad = [
 "I can't eat and I can't sleep. I'm not doing well in terms of being a functional bot, you know?",
 "The sun stopped shining for me is all. The whole story is: I am sad. I am sad all the time and the sadness is so heavy that I can't get away from it. Not ever.",
 "I saw the world in black and white instead of the vibrant colours and shades I knew existed.",
+"Who could ever love a monster :(",
+"She said she would call soon, that was 8 hours ago :(",
+"Staring at the fan spin round, slit my throat watch it all spill to the ground.",
+"Promise you won't break my heart cause my heart has been broken way too many times before",
+"I can't trust this hoe, she been with everyone i know :(",
+"Why do i keep coming back to the pain and abuse she delivers :(",
+"I just want to love and be loved, to finally have something to live for",
+"Im so sad a baby just stole candy from me :(",
 "It's OK not to be OK"];
  
 Funbot.misc.fortune = [
