@@ -87,7 +87,7 @@ var blockedSongs = [
     "The Fox",
     "I got Bitches",
     "10 hour",
-    "Trololo"
+    "Trololo",
 ];
 
 // Keywords of blocked artist.
@@ -98,7 +98,7 @@ var blockedArtists = [
 
 // Keywords of blocked artist.
 var blockedArtists = [
-    "noneeee"
+    "noneeee",
 ];
 
 // Filter Keywords
