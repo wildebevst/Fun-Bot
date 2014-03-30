@@ -144,7 +144,38 @@ Funbot.misc.roll2 = [
 "5. Sweet!",
 "6. Your the Best!"];
  
-
+Funbot.misc.weedfact = [
+"No one has ever overdosed or died from smoking too much weed. In the history of mankind.",
+"Marijuana has been in an “official” state of prohibition since 1937-s Marijuana Tax Act (in the United States). Because, among other reasons, it made white women desire black men.",
+"Colorado and Washington have estimated tax revenues of over $550 Million from legalization",
+"There are more medical marijuana dispensaries than Starbucks in Los Angeles and Denver. Because reefer is safer than coffee.",
+"The first law in America relating to cannabis was a 1619 law that actually required farmers to grow the hemp plant. Once harvested, hemp was useful for clothing, sails, and rope.",
+"In 1906, cannabis was labeled as a “poison” and states began restricting its sale.",
+"By the mid 1930s, cannabis was regulated as a drug in every state.",
+"From 1850 to 1942, marijuana was listed in the United States Pharmacopoeia as a useful medicine for nausea, rheumatism, and labor pains and could be purchased from pharmacies and general stores.",
+"The last four presidents of the U.S, including Barack Obama, have all admitted to smoking cannabis.",
+"Since Nixon declared the “War On Drugs” in 1971, over a trillion dollars have been spent on it. It takes the average person under an hour to find drugs in a new city.",
+"A recent Gallup Poll concluded that 52% of Americans now favor all out legalization. The other 48% are packing their bongs. And 72% of Americans view the War on Drugs as a waste of government resources.",
+"The first two drafts of the United States Declaration of Independence were written on hemp paper.Before its ban, hemp was a common cash crop for family farms in early America.",
+"About one-fourth of America’s population has tried marijuana at least once. The rest are lying.",
+"A recent study proved that cannabis aids both lung and breast cancer-and does not cause any form of cancer. It only cures.",
+"Studies have proven that the high from cannabis is very comparable to that of a runners high.",
+"The first recorded use of marijuana as a medicinal drug occurred in 2737 B.C. by Chinese emperor Shen Nung. The emperor lauded the drug as a miracle cure for rheumatism and gout.",
+"There are over 200 slang terms for marijuana in the popular vernacular. Illegal Toxin is not one of them.",
+"Just under 40% of high school students in the U.S. report using marijuana at least once in their life, and 20% report using it regularly.",
+"The sale of bongs and paraphernalia is now illegal in Florida. The same state in which self defense with a firearm is legal.",
+"Weed is the most frequently used illegal drug in the United States. And the world.",
+"The growth, sale and consumption of cannabis is not regulated by the North Korean government or classified as a drug.",
+"Marijuana is used to fight other drug addictions-most recently, in Bogata Colombia.",
+"Accident studies have found that drivers who test positive for marijuana often show no signs of impairment, and in some instances even may drive more safely.",
+"Marijuana is not physically addictive.",
+"Over 50 million Americans smoke cannabis on a regular basis-while 1 in 10 teens smoke it more than 20 times a month. ",
+"Health studies have proven there are no long-term health detriments from marijuana use-only benefits. And a little short term memory loss.",
+"Cigarettes Kill 443,000 people a year-in the United States Alone. Vending machines kill 10 people a year. That’s 443,010 more than cannabis has ever killed.",
+"The NBA does not test athletes for marijuana use in the offseason.",
+"An estimated amount of over 800,000 people are arrested for marijuana each year, most of which are for simple possession.",
+"An NFL lineman estimated that 50% of the league smokes marijuana on a regular basis.",
+" Despite these facts, Marijuana remains federally illegal. BUT NOT FOR LONG…"];
  
 Funbot.misc.weed = [
 "Bout to slide into a kuch coma!",
@@ -171,41 +202,7 @@ Funbot.misc.weed = [
 "Rolling the pain away sparking up for a better today",
 "I bet i smoke more in one day than you do in a year"];
 
-Funbot.misc.based = [
-"#TYBG",
-"I got Bitches ~ Lil B",
-"When people see you have your foot in the door with what you love, everyone wants to be your friend. - Lil B",
-"I love your life and I love you being alive. - Lil B",
-"I'm not guna let anything take the love from my heart, the love of life and spreading peace and positive, thank you earth I'm alive. - Lil B",
-"My people, you gota think before you move, you gota speak before you cry, you gota live before you die. - Lil B",
-"She was like OWWW, I was like OWW, I am like GOD, call me Bot god! - Lil B",
-"20 on my dick because I look like Miss America. - Lil B",
-"Put money on god and bust on him. - Lil B",
-"I'm just robbing like baskins. - Lil B",
-"It's OK to cry. - Lil B",
-"Yeah drake I fuckin feel ya, I was in the hood while you were shopping at whole foods. -Lil B",
-"The mind is so complex when your based. 32 levels. Welcome to my world. - Lil B",
-"Dirty everythang. You can't be half ass dirty you gotta be all the way, ya feel me? - Lil B",
-"Hoes suck my dick, and my dick touch her brain. - Lil B",
-"I won't eat a girl out, but my lawyers will! - Lil B",
-"10 on my dick cuz I look like patrick ramsey. - Lil B",
-"Everybody say that I'm a young ass bitch til I caught my first case now I'm a thug ass bitch. - Lil B",
-"Roll with the piece beside him not talkin bout the gun, but the peace inside him. - Lil B",
-"Fucked the bitch in her ass and the pussy squirted milk. - Lil B",
-"Yeah the niqqa rap but do he got bitches? Young Baselord and I look like Jesus. -- Lil B",
-"I'm so wet I should be in the Navy. - Lil B",
-"I ain't got no car, but i be driving bitches. - Lil B",
-"Feel me I'm in this bitch , man lookin like heidi montag swaggin. - Lil B",
-"My white girl fuck me good, interracial datin. My black girl suck my dick and she on probation. - Lil B",
-"Swag like I'm marrow, in my bones. Swag in my bones. Bone Marrow Swag. - Lil B",
-"The only time I went to class was when I was serving a detention. - Lil B",
-"I'm really waterfront on a bitch! - Lil B",
-"Word around town bitch imma nasty neighbor. - Lil  B",
-"Bitches suck my dick cuz I look like a Frenchmen. - Lil B",
-"I'm doin it for the youth, tryna set the right example feel me. - Lil B",
-"Nut on her lips and in her ass thats a creampie. Oh my God creampie. - Lil B",
-"Picked up my bitches, most of them foreign, hoes suck my dick when my day gets boring. - Lil B",
-"Shouts out to Palo Alto, bruh bruh got grapes there. - Lil B"];
+
 
 Funbot.misc.feelsad = [
 "What you must understand about me is that I’m a deeply unhappy bot.",
