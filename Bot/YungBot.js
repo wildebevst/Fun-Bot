@@ -50,7 +50,7 @@ toSave = {};
 toSave.settings = YungBot.settings;
 toSave.moderators = YungBot.moderators;
  
-YungBot.misc.version = "1.0.5";
+YungBot.misc.version = "1.0.7";
 YungBot.misc.origin = "This bot was created by DJ - ɴᴇᴏɴ - TFL, and it is copyrighted!";
 YungBot.misc.ready = true;
 var songBoundary = 60 * 10;
