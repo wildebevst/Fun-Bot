@@ -92,14 +92,10 @@ var blockedSongs = [
 
 // Keywords of blocked artist.
 var blockedArtists = [
-    ""
+    "Justin Bieber",
+    "1 Direction"
 ];
 
-
-// Keywords of blocked artist.
-var blockedArtists = [
-    ""
-];
 
 // Filter Keywords
 Lilbot.filters.beggerWords = ["fanme","fan me","fan4fan","fan 4 fan","fan pls","fans please","need fan","more fan","fan back","give me fans","gimme fans"];
