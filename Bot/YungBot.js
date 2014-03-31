@@ -392,7 +392,7 @@ API.off(API.VOTE_UPDATE);
 API.off(API.CHAT);
 $('#playback').show();
 $('#audience').show();
-API.setVolume(15);
+API.setVolume(17);
 };
 
 YungBot.hook = function(){
