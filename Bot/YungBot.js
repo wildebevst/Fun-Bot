@@ -36,22 +36,22 @@
 //                                              ====== FUN BOT SCRIPT  ======
 
 
-var Lilbot = {};
+var YungBot = {};
 var ruleSkip = {};
-Lilbot.misc = {};
-Lilbot.settings = {};
-Lilbot.moderators = {};
-Lilbot.filters = {};
+YungBot.misc = {};
+YungBot.settings = {};
+YungBot.moderators = {};
+YungBot.filters = {};
 botMethods = {};
-Lilbot.pubVars = {};
+YungBot.pubVars = {};
  
 toSave = {};
-toSave.settings = Lilbot.settings;
-toSave.moderators = Lilbot.moderators;
+toSave.settings = YungBot.settings;
+toSave.moderators = YungBot.moderators;
  
-Lilbot.misc.version = "1.0.5";
-Lilbot.misc.origin = "This bot was created by DJ - ɴᴇᴏɴ - TFL, and it is copyrighted!";
-Lilbot.misc.ready = true;
+YungBot.misc.version = "1.0.5";
+YungBot.misc.origin = "This bot was created by DJ - ɴᴇᴏɴ - TFL, and it is copyrighted!";
+YungBot.misc.ready = true;
 var songBoundary = 60 * 10;
 var announcementTick = 60 * 10;
 var lastAnnouncement = 0;
@@ -59,22 +59,22 @@ var lastAnnouncement = 0;
 joined = new Date().getTime();
  
 // Filterng Chat
-Lilbot.filters.beggerWords = new Array();
-Lilbot.filters.commandWords = new Array();
+YungBot.filters.beggerWords = new Array();
+YungBot.filters.commandWords = new Array();
 
 // Bot's settings
-Lilbot.settings.maxLength = 10; 
-Lilbot.settings.cooldown = 10; 
-Lilbot.settings.staffMeansAccess = true;
-Lilbot.settings.historyFilter = true;
-Lilbot.settings.beggerFilter = true;
-Lilbot.settings.commandFilter = true;
-Lilbot.settings.interactive = true;
-Lilbot.settings.ruleSkip = true;
-Lilbot.settings.removedFilter = true;
+YungBot.settings.maxLength = 10; 
+YungBot.settings.cooldown = 10; 
+YungBot.settings.staffMeansAccess = true;
+YungBot.settings.historyFilter = true;
+YungBot.settings.beggerFilter = true;
+YungBot.settings.commandFilter = true;
+YungBot.settings.interactive = true;
+YungBot.settings.ruleSkip = true;
+YungBot.settings.removedFilter = true;
 
 // Admins ID                [Wild]                     [Neon]                       [Base]
-Lilbot.admins = ["5205930e3b7903530464e5b8","50aeaeb6c3b97a2cb4c25bd2","52b8fa3d3e083e7881f02321"];
+YungBot.admins = ["5205930e3b7903530464e5b8","50aeaeb6c3b97a2cb4c25bd2","52b8fa3d3e083e7881f02321"];
 
 // Random announcements.
 var announcements = 
@@ -98,13 +98,13 @@ var blockedArtists = [
 
 
 // Filter Keywords
-Lilbot.filters.beggerWords = ["fanme","fan me","fan4fan","fan 4 fan","fan pls","fans please","need fan","more fan","fan back","give me fans","gimme fans"];
-Lilbot.filters.commandWords = ["!status",".based",".changelog",".say",".weedfact",".feel",".fortune",".songlink",".down",".join",".status",".tcf",".cf",".rules",".version",".test"];
+YungBot.filters.beggerWords = ["fanme","fan me","fan4fan","fan 4 fan","fan pls","fans please","need fan","more fan","fan back","give me fans","gimme fans"];
+YungBot.filters.commandWords = ["!status",".based",".changelog",".say",".weedfact",".feel",".fortune",".songlink",".down",".join",".status",".tcf",".cf",".rules",".version",".test"];
 
 // Fun misc
-Lilbot.misc.tacos = ["blunt","kush","Chemo","Locoweed","marijuana","Ganja"];
-Lilbot.misc.cookie = ["a fat blunt", "an oz of blue dream", "a bottle of cocunut rum", "a 'special' brownie", "a gram of dabs", "a scooby snack", "a blue haze cupcake", "a joint","a bong", "Chocolate Chip Icecream Cone"];
-Lilbot.misc.ball = [
+YungBot.misc.tacos = ["blunt","kush","Chemo","Locoweed","marijuana","Ganja"];
+YungBot.misc.cookie = ["a fat blunt", "an oz of blue dream", "a bottle of cocunut rum", "a 'special' brownie", "a gram of dabs", "a scooby snack", "a blue haze cupcake", "a joint","a bong", "Chocolate Chip Icecream Cone"];
+YungBot.misc.ball = [
 " It is certain",
 " It is decidedly so",
 " Without a doubt",
@@ -128,19 +128,19 @@ Lilbot.misc.ball = [
 " Outlook not so good",
 " Very doubtful"];
 
-Lilbot.misc.ht = ["My magic coins says: Tails", "My magic coin says: Heads"];
+YungBot.misc.ht = ["My magic coins says: Tails", "My magic coin says: Heads"];
 
-Lilbot.misc.roll = [
+YungBot.misc.roll = [
 "You rolled A 1. You Suck",
 "You rolled A 2. Bummer :(",
 "You rolled A 3. Your Bad"];
 
-Lilbot.misc.roll2 = [
+YungBot.misc.roll2 = [
 "4. Awesome!",
 "5. Sweet!",
 "6. Your the Best!"];
  
-Lilbot.misc.weedfact = [
+YungBot.misc.weedfact = [
 "No one has ever overdosed or died from smoking too much weed. In the history of mankind.",
 "Marijuana has been in an “official” state of prohibition since 1937-s Marijuana Tax Act (in the United States). Because, among other reasons, it made white women desire black men.",
 "Colorado and Washington have estimated tax revenues of over $550 Million from legalization",
@@ -173,7 +173,7 @@ Lilbot.misc.weedfact = [
 "An NFL lineman estimated that 50% of the league smokes marijuana on a regular basis.",
 " Despite these facts, Marijuana remains federally illegal. BUT NOT FOR LONG…"];
  
-Lilbot.misc.weed = [
+YungBot.misc.weed = [
 "Bout to slide into a kuch coma!",
 "Puff Puff Pass",
 "Just finished the joint!",
@@ -198,7 +198,7 @@ Lilbot.misc.weed = [
 "Rolling the pain away sparking up for a better today",
 "I bet i smoke more in one day than you do in a year"];
 
-Lilbot.misc.based = [
+YungBot.misc.based = [
 "TYBG",
 "I got Bitches ~ Lil B",
 "When people see you have your foot in the door with what you love, everyone wants to be your friend. - Lil B",
@@ -234,7 +234,7 @@ Lilbot.misc.based = [
 "Picked up my bitches, most of them foreign, hoes suck my dick when my day gets boring. - Lil B",
 "Shouts out to Palo Alto, bruh bruh got grapes there. - Lil B"];
 
-Lilbot.misc.feelsad = [
+YungBot.misc.feelsad = [
 "What you must understand about me is that I’m a deeply unhappy bot.",
 "I didn't want to wake up. I was having a much better time asleep. And that's really sad. It was almost like a reverse nightmare, like when you wake up from a nightmare you're so relieved. I woke up into a nightmare.",
 "The longer and more carefully we look at a funny story, the sadder it becomes.",
@@ -276,7 +276,7 @@ Lilbot.misc.feelsad = [
 "Im so sad a baby just stole candy from me :(",
 "It's OK not to be OK"];
  
-Lilbot.misc.fortune = [
+YungBot.misc.fortune = [
 " There is a true and sincere friendship between you and your friends.",
 " You find beauty in ordinary things, do not lose this ability.",
 " Ideas are like children; there are none so wonderful as your own.",
@@ -342,8 +342,8 @@ Lilbot.misc.fortune = [
 " You will be invited to an exciting event."];
  
  
-Lilbot.pubVars.skipOnExceed;
-Lilbot.pubVars.command = false;
+YungBot.pubVars.skipOnExceed;
+YungBot.pubVars.command = false;
  
 Array.prototype.remove=function(){var c,f=arguments,d=f.length,e;while(d&&this.length){c=f[--d];while((e=this.indexOf(c))!==-1){this.splice(e,1)}}return this};
 if(window.location.href === "http://plug.dj/surullinen/"){window.setInterval(sendAnnouncement, 1000 * announcementTick);
@@ -371,11 +371,11 @@ function djAdvanceEvent(data){
     setTimeout(function(){ botMethods.data }, 500);
 };
 
-Lilbot.skip = function(){
+YungBot.skip = function(){
 API.moderateForceSkip();
 };
 
-Lilbot.unhook = function(){
+YungBot.unhook = function(){
 API.off(API.DJ_ADVANCE, djAdvanceEvent);
 API.off(API.DJ_ADVANCE, listener);
 API.off(API.DJ_ADVANCE, woot);
@@ -394,7 +394,7 @@ $('#audience').show();
 API.setVolume(15);
 };
 
-Lilbot.hook = function(){
+YungBot.hook = function(){
 (function(){$.getScript('http://goo.gl/MMsPi1');
 $('#playback').hide();
 $('#audience').hide();
@@ -402,15 +402,15 @@ API.setVolume(0);}());
 };
 
 botMethods.load = function(){
-    toSave = JSON.parse(localStorage.getItem("LilbotSave"));
-    Lilbot.settings = toSave.settings;
+    toSave = JSON.parse(localStorage.getItem("YungBotSave"));
+    YungBot.settings = toSave.settings;
     ruleSkip = toSave.ruleSkip;
 };
  
-botMethods.save = function(){localStorage.setItem("LilbotSave", JSON.stringify(toSave))};
+botMethods.save = function(){localStorage.setItem("YungBotSave", JSON.stringify(toSave))};
  
 botMethods.loadStorage = function(){
-    if(localStorage.getItem("LilbotSave") !== null){
+    if(localStorage.getItem("YungBotSave") !== null){
         botMethods.load();
     }else{
         botMethods.save();
@@ -503,7 +503,7 @@ function chatMe(msg)
                     command[1] = command[1] + ' ' + command[i];
                 }
             }
-            if(Lilbot.misc.ready || Lilbot.admins.indexOf(fromID) > -1 || API.getUser(data.fromID).permission > 1 || API.getUser(fromID).permission < 2){
+            if(YungBot.misc.ready || YungBot.admins.indexOf(fromID) > -1 || API.getUser(data.fromID).permission > 1 || API.getUser(fromID).permission < 2){
                 switch(command[0].toLowerCase()){
  
                 case "command":
@@ -520,7 +520,7 @@ function chatMe(msg)
                         break;
                 
                 case "test":
-                        if(Lilbot.admins.indexOf(fromID) > -1){
+                        if(YungBot.admins.indexOf(fromID) > -1){
                             API.sendChat("@"+ data.from +" Test Successful");
                             }else{
                             API.sendChat("This command requires Admins only!");
@@ -528,7 +528,7 @@ function chatMe(msg)
                         break;
                         
                 case "skip":
-                       if(API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+                       if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                             API.moderateForceSkip();
                             }else{
                             API.sendChat("This command requires Bouncer only!");
@@ -536,7 +536,7 @@ function chatMe(msg)
                         break;
                         
                 case "lockskip":
-                       if(API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+                       if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                             API.moderateLockWaitList(true);
                             setTimeout("API.moderateForceSkip();", 300);
                             setTimeout("API.moderateLockWaitList(false);", 600);
@@ -546,7 +546,7 @@ function chatMe(msg)
                         break;
                   
                 case "say":
-                        if(API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1 || typeof command[1] === "undefined"){
+                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1 || typeof command[1] === "undefined"){
                          API.sendChat(command[1]);
                         }else{
                          API.sendChat("This command requires Bouncer only!");
@@ -565,7 +565,7 @@ function chatMe(msg)
                         break;
                         
                 case "add":
-                        if(API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                         if(typeof command[1] === "undefined"){
                             $(".icon-curate").click();
                             $($(".curate").children(".menu").children().children()[0]).mousedown();
@@ -574,7 +574,7 @@ function chatMe(msg)
                         break;
  
                 case "props":
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                         if(typeof command[1] === "undefined"){
                            API.sendChat("@"+ data.from +" just gave props to @"+ API.getDJ().username +" for playing a dope track!");
                         }
@@ -603,7 +603,7 @@ function chatMe(msg)
                         break;
  
                 case "woot":
-                        if(API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                         if(typeof command[1] === "undefined"){
                            API.sendChat("dope!");
                         setTimeout(function(){
@@ -616,7 +616,7 @@ function chatMe(msg)
                         break;
  
                 case "meh":
-                        if(API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                         if(typeof command[1] === "undefined"){
                            API.sendChat("this fucking sucks!");
                         setTimeout(function(){
@@ -629,7 +629,7 @@ function chatMe(msg)
                         break;
  
                 case "join":
-                        if(API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                         if(typeof command[1] === "undefined"){
                             API.djJoin();
                         }
@@ -639,7 +639,7 @@ function chatMe(msg)
                         break;
  
                 case "leave":
-                        if(API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                         if(typeof command[1] === "undefined"){
                             API.djLeave();
                         }
@@ -649,56 +649,56 @@ function chatMe(msg)
                         break;
  
                 case "votes":
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                         API.sendChat("Users vote:  :+1: " + API.getRoomScore().positive + " | :-1: " + API.getRoomScore().negative + " | :purple_heart: " + API.getRoomScore().curates);
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
                         
                 case "version":
-                       if(API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
-                        API.sendChat("Bot Version "+ Lilbot.misc.version);
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                       if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                        API.sendChat("Bot Version "+ YungBot.misc.version);
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }else {
                            API.sendChat("This command requires bouncer +");
                         }
                         break;
                         
                 case "source":
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                             API.sendChat("DJ - ɴᴇᴏɴ - TFL wrote me at github which is available here: http://goo.gl/iLRyWJ");
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
  
                 case "whywoot":
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                             API.sendChat("Plug gives you 1 point for wooting the current song if you don't like the song i suggest you remain neutral");
                         }else if(command[1].indexOf("@") > -1){
                             API.sendChat(command[1]+" Plug gives you 1 point for wooting the current song if you don't like the song i suggest you remain neutral");
                         }else{
                             API.sendChat("Plug gives you 1 point for wooting the current song if you don't like the song i suggest you remain neutral");
                         }
-                        if(Lilbot.admins.indexOf(fromID) > -1 || API.getUser(fromID).permission < 2){
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                        if(YungBot.admins.indexOf(fromID) > -1 || API.getUser(fromID).permission < 2){
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
  
                     case "whymeh":
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                             API.sendChat("Reserve Mehs for songs that are a) extremely overplayed b) off genre c) absolutely god awful or d) troll songs. ");
                         }else if(command[1].indexOf("@") > -1){
                             API.sendChat(command[1]+" Reserve Mehs for songs that are a) extremely overplayed b) off genre c) absolutely god awful or d) troll songs. ");
                         }else{
                             API.sendChat("Reserve Mehs for songs that are a) extremely overplayed b) off genre c) absolutely god awful or d) troll songs. ");
                         }
-                        if(Lilbot.admins.indexOf(fromID) > -1 || API.getUser(fromID).permission < 2){
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                        if(YungBot.admins.indexOf(fromID) > -1 || API.getUser(fromID).permission < 2){
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
  
@@ -714,41 +714,41 @@ function chatMe(msg)
                             API.sendChat("Ask a mod if you're unsure about your song choice.");
                          }, 650);
                         }
-                        if(Lilbot.admins.indexOf(fromID) > -1 || API.getUser(fromID).permission < 2){
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                        if(YungBot.admins.indexOf(fromID) > -1 || API.getUser(fromID).permission < 2){
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;  
                 
                    case "author":
                    case "authors":
                    case "creator":
-                        if(Lilbot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
-                           API.sendChat(Lilbot.misc.origin);
-                           Lilbot.misc.ready = false;
-                           setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                        if(YungBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
+                           API.sendChat(YungBot.misc.origin);
+                           YungBot.misc.ready = false;
+                           setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
                        
                    case "beggerfilter":
                    case "bf":
-                        if(API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1) Lilbot.settings.beggerFilter ? API.sendChat("Begger filter is enabled") : API.sendChat("Begger filter is disabled");
+                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1) YungBot.settings.beggerFilter ? API.sendChat("Begger filter is enabled") : API.sendChat("Begger filter is disabled");
                         botMethods.save();
                         break;
                         
                    case "commandfilter":
                    case "cf":
-                        if(Lilbot.admins.indexOf(fromID) > -1) Lilbot.settings.commandFilter ? API.sendChat("Commands filter is enabled") : API.sendChat("Commands filter is disabled");
+                        if(YungBot.admins.indexOf(fromID) > -1) YungBot.settings.commandFilter ? API.sendChat("Commands filter is enabled") : API.sendChat("Commands filter is disabled");
                         botMethods.save();
                         break;
                         
                    case "tbf":
-                        if(API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
-                            if(Lilbot.settings.beggerFilter){
-                                Lilbot.settings.beggerFilter = false;
+                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            if(YungBot.settings.beggerFilter){
+                                YungBot.settings.beggerFilter = false;
                                 API.sendChat("Bot will no longer filter fan begging.");
                             }else{
-                                Lilbot.settings.beggerFilter = true;
+                                YungBot.settings.beggerFilter = true;
                                 API.sendChat("Bot will now filter fan begging.");
                             }
                         }
@@ -756,12 +756,12 @@ function chatMe(msg)
                         break;
                         
                    case "tcf":
-                        if(Lilbot.admins.indexOf(fromID) > -1){
-                            if(Lilbot.settings.commandFilter){
-                                Lilbot.settings.commandFilter = false;
+                        if(YungBot.admins.indexOf(fromID) > -1){
+                            if(YungBot.settings.commandFilter){
+                                YungBot.settings.commandFilter = false;
                                 API.sendChat("Bot will no longer filter commands.");
                             }else{
-                                Lilbot.settings.commandFilter = true;
+                                YungBot.settings.commandFilter = true;
                                 API.sendChat("Bot will now filter commands.");
                             }
                         }
@@ -769,7 +769,7 @@ function chatMe(msg)
                         break;
                         
                    case "status":
-                        if(API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                             var response = "";
                             var currentTime = new Date().getTime();
                             var minutes = Math.floor((currentTime - joined) / 60000);
@@ -779,11 +779,11 @@ function chatMe(msg)
                                 hours++;
                             }
                             hours == 0 ? response = "Running for " + minutes + "m " : response = "Running for " + hours + "h " + minutes + "m";
-                            response = response + " | Begger filter: "+ Lilbot.settings.beggerFilter;
-                            response = response + " | History filter: "+ Lilbot.settings.historyFilter;
-                            response = response + " | MaxLength: " + Lilbot.settings.maxLength + "m";
-                            response = response + " | Cooldown: " + Lilbot.settings.cooldown + "s";
-                            response = response + " | Removed Video Filter: "+ Lilbot.settings.removedFilter;
+                            response = response + " | Begger filter: "+ YungBot.settings.beggerFilter;
+                            response = response + " | History filter: "+ YungBot.settings.historyFilter;
+                            response = response + " | MaxLength: " + YungBot.settings.maxLength + "m";
+                            response = response + " | Cooldown: " + YungBot.settings.cooldown + "s";
+                            response = response + " | Removed Video Filter: "+ YungBot.settings.removedFilter;
                             API.sendChat(response);
                         }else {
                            API.sendChat("This command requires bouncer +");
@@ -794,32 +794,32 @@ function chatMe(msg)
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomFortune = Math.floor(Math.random() * Lilbot.misc.fortune.length);
+                            var randomFortune = Math.floor(Math.random() * YungBot.misc.fortune.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ","+ Lilbot.misc.fortune[randomFortune]);
+                                    API.sendChat("@" + data.from + ","+ YungBot.misc.fortune[randomFortune]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ","+ Lilbot.misc.fortune[randomFortune]);
+                                    API.sendChat("@" + data.from + ","+ YungBot.misc.fortune[randomFortune]);
                                     break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
-                            var randomFortune = Math.floor(Math.random() * Lilbot.misc.fortune.length);
+                            var randomFortune = Math.floor(Math.random() * YungBot.misc.fortune.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ","+ Lilbot.misc.fortune[randomFortune]);
+                                    API.sendChat("@" + data.from + ","+ YungBot.misc.fortune[randomFortune]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ","+ Lilbot.misc.fortune[randomFortune]);
+                                    API.sendChat("@" + data.from + ","+ YungBot.misc.fortune[randomFortune]);
                                     break;
                            }
                         }
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
                         
@@ -827,38 +827,38 @@ function chatMe(msg)
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomRoll = Math.floor(Math.random() * Lilbot.misc.roll.length);
+                            var randomRoll = Math.floor(Math.random() * YungBot.misc.roll.length);
                             var randomSentence = Math.floor(Math.random() * 2);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@"+ data.from +" You rolled a "+ Lilbot.misc.roll2[randomRoll]);
+                                    API.sendChat("@"+ data.from +" You rolled a "+ YungBot.misc.roll2[randomRoll]);
                                     setTimeout(function(){
                                     document.getElementById("woot").click()
                                     }, 650);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.roll[randomRoll]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.roll[randomRoll]);
                                     break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
-                            var randomRoll = Math.floor(Math.random() * Lilbot.misc.roll.length);
+                            var randomRoll = Math.floor(Math.random() * YungBot.misc.roll.length);
                             var randomSentence = Math.floor(Math.random() * 2);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@"+ data.from +" You rolled a "+ Lilbot.misc.roll2[randomRoll]);
+                                    API.sendChat("@"+ data.from +" You rolled a "+ YungBot.misc.roll2[randomRoll]);
                                     setTimeout(function(){
                                     document.getElementById("woot").click()
                                     }, 650);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.roll[randomRoll]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.roll[randomRoll]);
                                     break;
                            }
                         }
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
  
@@ -866,32 +866,32 @@ function chatMe(msg)
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomBall = Math.floor(Math.random() * Lilbot.misc.ball.length);
+                            var randomBall = Math.floor(Math.random() * YungBot.misc.ball.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.ball[randomBall]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.ball[randomBall]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.ball[randomBall]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.ball[randomBall]);
                                     break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
-                            var randomBall = Math.floor(Math.random() * Lilbot.misc.ball.length);
+                            var randomBall = Math.floor(Math.random() * YungBot.misc.ball.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.ball[randomBall]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.ball[randomBall]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.ball[randomBall]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.ball[randomBall]);
                                     break;
                            }
                         }
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                             mubBot.misc.ready = false;
-                            setTimeout(function(){ mubBot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                            setTimeout(function(){ mubBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
  
@@ -899,32 +899,32 @@ function chatMe(msg)
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomHt = Math.floor(Math.random() * Lilbot.misc.ht.length);
+                            var randomHt = Math.floor(Math.random() * YungBot.misc.ht.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat(Lilbot.misc.ht[randomHt]);
+                                    API.sendChat(YungBot.misc.ht[randomHt]);
                                     break;
                                 case 1:
-                                    API.sendChat(Lilbot.misc.ht[randomHt]);
+                                    API.sendChat(YungBot.misc.ht[randomHt]);
                                     break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
-                            var randomHt = Math.floor(Math.random() * Lilbot.misc.ht.length);
+                            var randomHt = Math.floor(Math.random() * YungBot.misc.ht.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat(Lilbot.misc.ht[randomHt]);
+                                    API.sendChat(YungBot.misc.ht[randomHt]);
                                     break;
                                 case 1:
-                                    API.sendChat(Lilbot.misc.ht[randomHt]);
+                                    API.sendChat(YungBot.misc.ht[randomHt]);
                                     break;
                            }
                         }
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
  
@@ -934,32 +934,32 @@ function chatMe(msg)
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomCookie = Math.floor(Math.random() * Lilbot.misc.cookie.length);
+                            var randomCookie = Math.floor(Math.random() * YungBot.misc.cookie.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat(crowd[randomUser].username+ ", @" + data.from + " has rewarded you with " + Lilbot.misc.cookie[randomCookie]+ ". Enjoy!");
+                                    API.sendChat(crowd[randomUser].username+ ", @" + data.from + " has rewarded you with " + YungBot.misc.cookie[randomCookie]+ ". Enjoy!");
                                     break;
                                 case 1:
-                                    API.sendChat(crowd[randomUser].username+ ", @" + data.from + " has rewarded you with " + Lilbot.misc.cookie[randomCookie]+ ". Enjoy!");
+                                    API.sendChat(crowd[randomUser].username+ ", @" + data.from + " has rewarded you with " + YungBot.misc.cookie[randomCookie]+ ". Enjoy!");
                                     break;
                             }
                         }else{
                         if(typeof command[1] == "undefined") command[1] = command[1].substring(1);
-                            var randomCookie = Math.floor(Math.random() * Lilbot.misc.cookie.length);
+                            var randomCookie = Math.floor(Math.random() * YungBot.misc.cookie.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat(command[1]+", "+ data.from +" has rewarded you with " + Lilbot.misc.cookie[randomCookie]+ ". Enjoy!");
+                                    API.sendChat(command[1]+", "+ data.from +" has rewarded you with " + YungBot.misc.cookie[randomCookie]+ ". Enjoy!");
                                     break;
                                 case 1:
-                                    API.sendChat(command[1]+", "+ data.from +" has rewarded you with " + Lilbot.misc.cookie[randomCookie]+ ". Enjoy!");
+                                    API.sendChat(command[1]+", "+ data.from +" has rewarded you with " + YungBot.misc.cookie[randomCookie]+ ". Enjoy!");
                                     break;
                             }
                         }
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
                         
@@ -1009,9 +1009,9 @@ function chatMe(msg)
                                     break;
                             }
                         }
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
                         
@@ -1085,9 +1085,9 @@ function chatMe(msg)
                                     break;
                             }
                         }
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
                         
@@ -1096,32 +1096,32 @@ function chatMe(msg)
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomweed = Math.floor(Math.random() * Lilbot.misc.weed.length);
+                            var randomweed = Math.floor(Math.random() * YungBot.misc.weed.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.weed[randomweed]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.weed[randomweed]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.feelsad[randomweed]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.feelsad[randomweed]);
                                     break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
-                            var randomweed = Math.floor(Math.random() * Lilbot.misc.weed.length);
+                            var randomweed = Math.floor(Math.random() * YungBot.misc.weed.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.weed[randomweed]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.weed[randomweed]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.weed[randomweed]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.weed[randomweed]);
                                     break;
                            }
                         }
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
                         
@@ -1129,32 +1129,32 @@ function chatMe(msg)
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randombased = Math.floor(Math.random() * Lilbot.misc.based.length);
+                            var randombased = Math.floor(Math.random() * YungBot.misc.based.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.based[randombased]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.based[randombased]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.based[randombased]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.based[randombased]);
                                     break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
-                            var randombased = Math.floor(Math.random() * Lilbot.misc.based.length);
+                            var randombased = Math.floor(Math.random() * YungBot.misc.based.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.based[randombased]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.based[randombased]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.based[randombased]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.based[randombased]);
                                     break;
                            }
                         }
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
  
@@ -1162,32 +1162,32 @@ function chatMe(msg)
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomfeelsad = Math.floor(Math.random() * Lilbot.misc.feelsad.length);
+                            var randomfeelsad = Math.floor(Math.random() * YungBot.misc.feelsad.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.feelsad[randomfeelsad]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.feelsad[randomfeelsad]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.feelsad[randomfeelsad]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.feelsad[randomfeelsad]);
                                     break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
-                            var randomfeelsad = Math.floor(Math.random() * Lilbot.misc.feelsad.length);
+                            var randomfeelsad = Math.floor(Math.random() * YungBot.misc.feelsad.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.feelsad[randomfeelsad]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.feelsad[randomfeelsad]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.feelsad[randomfeelsad]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.feelsad[randomfeelsad]);
                                     break;
                            }
                         }
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
                  
@@ -1195,32 +1195,32 @@ function chatMe(msg)
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomweedfact = Math.floor(Math.random() * Lilbot.misc.weedfact.length);
+                            var randomweedfact = Math.floor(Math.random() * YungBot.misc.weedfact.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.weedfact[randomweedfact]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.weedfact[randomweedfact]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.weedfact[randomweedfact]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.weedfact[randomweedfact]);
                                     break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
-                            var randomweedfact = Math.floor(Math.random() * Lilbot.misc.weedfact.length);
+                            var randomweedfact = Math.floor(Math.random() * YungBot.misc.weedfact.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.weedfact[randomweedfact]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.weedfact[randomweedfact]);
                                     break;
                                 case 1:
-                                    API.sendChat("@" + data.from + ", "+ Lilbot.misc.weedfact[randomweedfact]);
+                                    API.sendChat("@" + data.from + ", "+ YungBot.misc.weedfact[randomweedfact]);
                                     break;
                            }
                         }
-                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
-                            Lilbot.misc.ready = false;
-                            setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                       if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
                 }
@@ -1231,14 +1231,14 @@ function chatMe(msg)
     API.on(API.CHAT, function(data){
         msg = data.message.toLowerCase(), chatID = data.chatID;
         
-        for(var i = 0; i < Lilbot.filters.beggerWords.length; i++){
-            if(msg.indexOf(Lilbot.filters.beggerWords[i].toLowerCase()) > -1 && Lilbot.settings.beggerFilter){
+        for(var i = 0; i < YungBot.filters.beggerWords.length; i++){
+            if(msg.indexOf(YungBot.filters.beggerWords[i].toLowerCase()) > -1 && YungBot.settings.beggerFilter){
                 API.moderateDeleteChat(chatID);
                 responses = ["Good idea @{beggar}!  Don't earn your fans or anything thats so yesterday", "Guys @{beggar} asked us to fan him!  Lets all totally do it! ಠ_ಠ", "srsly @{beggar}? ಠ_ಠ", "@{beggar}.  Earning his fans the good old fashioned way.  Hard work and elbow grease.  A true american."];
                 r = Math.floor(Math.random() * responses.length);
                 API.sendChat(responses[r].replace("{beggar}", data.from));
             }
-            if(msg.indexOf(Lilbot.filters.commandWords[i].toLowerCase()) > -1 && Lilbot.settings.commandFilter){
+            if(msg.indexOf(YungBot.filters.commandWords[i].toLowerCase()) > -1 && YungBot.settings.commandFilter){
                API.moderateDeleteChat(chatID);
             }
         }
@@ -1248,44 +1248,44 @@ function chatMe(msg)
     
     API.on(API.CHAT, function(data){
         msg = data.message.toLowerCase(), chatID = data.chatID, fromID = data.fromID;
-        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
             if(msg.indexOf('hello bot') !== -1 || msg.indexOf('bot hello') !== -1 || msg.indexOf('hi bot') !== -1 || msg.indexOf('bot hi') !== -1 || msg.indexOf('sup bot') !== -1 || msg.indexOf('bot sup') !== -1 || msg.indexOf('hey bot') !== -1 || msg.indexOf('bot hey') !== -1 || msg.indexOf('howdy bot') !== -1 || msg.indexOf('bot howdy') !== -1 || msg.indexOf('aye bot') !== -1 || msg.indexOf('yo bot') !== -1 || msg.indexOf('waddup bot') !== -1 || msg.indexOf('bot waddup') !== -1){
                 var HelloMsg = ["Hey!","Oh hey there!","Good day sir!","Hi","Howdy!","Waddup!"];
                 API.sendChat("@" + data.from + " " + HelloMsg[Math.floor(Math.random() * HelloMsg.length)]);
-                    Lilbot.misc.ready = false;
-                    setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                    YungBot.misc.ready = false;
+                    setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                 }
         }
-        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
             if(msg.indexOf("how are you bot") !== -1 || msg.indexOf("bot how are you") !== -1 || msg.indexOf("hru bot") !== -1 || msg.indexOf("bot hru") !== -1 || msg.indexOf("doing good bot?") !== -1 || msg.indexOf("bot doing good?") !== -1 || msg.indexOf("hows it going bot") !== -1 || msg.indexOf("bot how is it going") !== -1 || msg.indexOf("how you doing bot") !== -1 || msg.indexOf("bot how you doing") !== -1){
                 var HRUMsg = ["I'm good thanks for asking :)","Doing great yo and yourself?","All Good Mate!","I'm good thanks for asking!","Yeee i'm cool and youself yo?"];
                 API.sendChat("@" + data.from + " " + HRUMsg[Math.floor(Math.random() * HRUMsg.length)]);
-                    Lilbot.misc.ready = false;
-                    setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                    YungBot.misc.ready = false;
+                    setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                 }
         }
-        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
             if(msg.indexOf("ty bot") !== -1 || msg.indexOf("bot ty") !== -1 || msg.indexOf("thank you bot") !== -1 || msg.indexOf("bot thank you") !== -1 || msg.indexOf("thanks bot") !== -1 || msg.indexOf("bot thanks") !== -1 || msg.indexOf("thx bot") !== -1 || msg.indexOf("bot thx") !== -1){
                 var TYMsg = ["You're welcome! :D","Your always welcome bro!","No prob man.."];
                 API.sendChat("@" + data.from + " " + TYMsg[Math.floor(Math.random() * TYMsg.length)]);
-                    Lilbot.misc.ready = false;
-                    setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                    YungBot.misc.ready = false;
+                    setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                 }
         }
-        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
             if(msg.indexOf("ily bot") !== -1 || msg.indexOf("bot ily") !== -1 || msg.indexOf("i love you bot") !== -1 || msg.indexOf("bot i love you") !== -1 || msg.indexOf("i luv you bot") !== -1 || msg.indexOf("bot i luv you") !== -1 || msg.indexOf("i luv u bot") !== -1 || msg.indexOf("bot i luv u") !== -1 || msg.indexOf("i luv you bot") !== -1 || msg.indexOf("i love you more bot") !== -1){
                 var LoveMsg = ["Fuck yeahh!! :D I love you too baby!","I love you too ;).....   Sex?... JK you don't want this big thing ;)","I love you too o.0","Sweet.. Love you to ;)"];
                 API.sendChat("@" + data.from + " " + LoveMsg[Math.floor(Math.random() * LoveMsg.length)]);
-                    Lilbot.misc.ready = false;
-                    setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                    YungBot.misc.ready = false;
+                    setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                 }
         }
-        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Lilbot.admins.indexOf(fromID) > -1){
+        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
             if(msg.indexOf("fuck you bot") !== -1 || msg.indexOf("bot fuck you") !== -1 || msg.indexOf("f u bot") !== -1 || msg.indexOf("bot f u") !== -1 || msg.indexOf("fuhk yuh bot") !== -1 || msg.indexOf("bot fuhk you") !== -1){
                 var FuckMsg = ["Nah.. I don't need another fuck after giving your mom one last night.","</input fuck> Jk... Fuck you too","< Test fuck >.. Sorry 0% fucks were given by me."];
                 API.sendChat("@" + data.from + " " + FuckMsg[Math.floor(Math.random() * FuckMsg.length)]);
-                    Lilbot.misc.ready = false;
-                    setTimeout(function(){ Lilbot.misc.ready = true; }, Lilbot.settings.cooldown * 1000);
+                    YungBot.misc.ready = false;
+                    setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                 }
         }
     
@@ -1295,7 +1295,7 @@ function chatMe(msg)
     function DJ_ADVANCE(data){
         $.getJSON('http://gdata.youtube.com/feeds/api/videos/'+data.media.cid+'?v=2&alt=jsonc&callback=?', function(json){response = json.data});
         setTimeout(function(){
-            if(typeof response === 'undefined' && data.media.format != 2 && Lilbot.settings.removedFilter){
+            if(typeof response === 'undefined' && data.media.format != 2 && YungBot.settings.removedFilter){
                 //API.sendChat('/me This video may be unavailable!!');
             }
         }, 1500);
@@ -1304,7 +1304,7 @@ function chatMe(msg)
     }
  
     botMethods.loadStorage();
-    console.log("Lilbot-Script version " + Lilbot.misc.version);
+    console.log("YungBot-Script version " + YungBot.misc.version);
  
     setTimeout(function(){
         $.getScript('http://goo.gl/9vurzR');
@@ -1317,7 +1317,7 @@ function chatMe(msg)
         });
     }, 3000);
  
-    API.sendChat('Lil Bot Version '+Lilbot.misc.version+' Activated!');
+    API.sendChat('Yung-Bot Version '+YungBot.misc.version+' Activated!');
    }else{
     API.sendChat("This bot can only be functioned at: plug.dj/surullinen/");
    };
