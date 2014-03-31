@@ -28,7 +28,8 @@
  
 
  * @Author:    Tawi Jordan - ๖ۣۜĐJ - ɴᴇᴏɴ - TFL (Member. on Plug.dj)
- * @Admin:            Will - ωιℓ∂євє/\ѕт      (Host. on (╯︵╰,) ᴱᴹᴼᵀᴵᴼᴺᴬᴸ)
+ * @Admin:     Will - ωιℓ∂євє/\ѕт      (Host. on (╯︵╰,) ᴱᴹᴼᵀᴵᴼᴺᴬᴸ)
+ *
  */
 
 
@@ -515,7 +516,28 @@ function chatMe(msg)
                         }, 650);
                         }else if(command[1].indexOf("@") > -1){
                             API.sendChat(command[1]+" My commands: reward | flipcoin | weedfact | based | feelsad | weed | hug | drink | 8ball | fortune | songlink | download | help | whywoot | whymeh | props | votes | woot | meh | skip | say | version | userstats | mystats | source | status");
-                            API.sendChat(".{commands} Mention is included!");
+                        }
+                        break;
+                        
+                case "theme":
+                case "themes":
+                        if(typeof command[1] == "undefined"){
+                        setTimeout(function(){
+                           API.sendChat("[Themes] (1) Chill Trap Future Beats, (2) Good Hip-Hop, (3) hopped-Screwed. [Not allowed] (1) DubstepHouse, (2) Rock, (3) DnB, (4) Techno, (5) Festival Trap, (6) HOOTS.");
+                        }, 650);
+                        }else if(command[1].indexOf("@") > -1){
+                            API.sendChat(command[1]+" [Themes] (1) Chill Trap Future Beats, (2) Good Hip-Hop, (3) hopped-Screwed. [Not allowed] (1) DubstepHouse, (2) Rock, (3) DnB, (4) Techno, (5) Festival Trap, (6) HOOTS.");
+                        }
+                        break;
+                        
+                case "rule":
+                case "rules":
+                        if(typeof command[1] == "undefined"){
+                        setTimeout(function(){
+                           API.sendChat("[Rules] (1) Sad, Trill, Vibe, Chill. (2) 10 Min Max. (3) NSFW Community. (4) No Mainstream. (5) Dubstep,Dnb,House (can be played if it is sad enough). (6) Don't play songs in history. (7) Don't play grabbed tracks to much.");
+                        }, 650);
+                        }else if(command[1].indexOf("@") > -1){
+                            API.sendChat(command[1]+" [Rules] (1) Sad, Trill, Vibe, Chill. (2) 10 Min Max. (3) NSFW Community. (4) No Mainstream. (5) Dubstep,Dnb,House (can be played if it is sad enough). (6) Don't play songs in history. (7) Don't play grabbed tracks to much.");
                         }
                         break;
                 
