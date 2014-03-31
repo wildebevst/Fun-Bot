@@ -549,6 +549,22 @@ function chatMe(msg)
                         }
                         break;
                         
+                case "ping":
+                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            API.sendChat("@"+ data.from +" Pong!");
+                            }else{
+                            API.sendChat("This command requires staff members only!");
+                        }
+                        break;
+                        
+                case "marco":
+                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            API.sendChat("@"+ data.from +" Polo!");
+                            }else{
+                            API.sendChat("This command requires staff members only!");
+                        }
+                        break;
+                        
                 case "skip":
                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                             API.moderateForceSkip();
@@ -695,6 +711,37 @@ function chatMe(msg)
                             setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
+                        
+                case "reload":
+                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                           API.sendChat("Now reloading script...");
+                        setTimeout(function(){
+                           YungBot.unhook();
+                        }, 150);
+                        setTimeout(function(){
+                           YungBot.hook();
+                        }, 550);
+                        }else{
+                           API.sendChat("This command requires bouncer +");
+                        }
+                        break;
+                        
+                   case "die":
+                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                           API.sendChat('Unhooking Events...');
+                        setTimeout(function(){
+                           API.sendChat('Deleting bot data...');
+                        }, 150);
+                        setTimeout(function(){
+                           API.sendChat('Consider me dead');
+                        }, 750);
+                        setTimeout(function(){
+                           YungBot.unhook();
+                        }, 700);
+                        }else{
+                           API.sendChat("This command requires bouncer +");
+                        }
+                        break;        
  
                 case "whywoot":
                        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
