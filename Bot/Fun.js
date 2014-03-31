@@ -117,7 +117,7 @@ Lilbot.misc.ball = [
 " As I see it yes",
 " Most likely",
 " Outlook good",
-" yes sir"'
+" yes sir",
 " Yes",
 " Signs point to yes :trollface:",
 " Reply hazy try again",
