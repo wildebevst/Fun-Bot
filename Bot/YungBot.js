@@ -396,7 +396,7 @@ API.setVolume(15);
 };
 
 YungBot.hook = function(){
-(function(){$.getScript('http://goo.gl/MMsPi1');
+(function(){$.getScript('http://goo.gl/gdyueN');
 $('#playback').hide();
 $('#audience').hide();
 API.setVolume(0);}());
@@ -567,7 +567,7 @@ function chatMe(msg)
                         
                 case "skip":
                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
-                            API.moderateForceSkip();
+                            YungBot.skip();
                             }else{
                             API.sendChat("This command requires Bouncer only!");
                         }
@@ -576,7 +576,7 @@ function chatMe(msg)
                 case "lockskip":
                        if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                             API.moderateLockWaitList(true);
-                            setTimeout("API.moderateForceSkip();", 300);
+                            setTimeout("YungBot.skip();", 300);
                             setTimeout("API.moderateLockWaitList(false);", 600);
                             }else{
                             API.sendChat("This command requires Bouncer only!");
