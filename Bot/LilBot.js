@@ -49,7 +49,7 @@ toSave = {};
 toSave.settings = Lilbot.settings;
 toSave.moderators = Lilbot.moderators;
  
-Lilbot.misc.version = "1.0.49";
+Lilbot.misc.version = "1.0.5";
 Lilbot.misc.origin = "This bot was created by DJ - ɴᴇᴏɴ - TFL, and it is copyrighted!";
 Lilbot.misc.ready = true;
 var songBoundary = 60 * 10;
