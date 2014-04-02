@@ -518,6 +518,7 @@ function chatMe(msg)
                            API.sendChat("roomstats | roomstats2 | mystats | status");
                         }, 710);
                         }else if(command[1].indexOf("@") > -1){
+                        setTimeout(function(){
                             API.sendChat(command[1]+" My commands: rules | theme | reward | flipcoin | weedfact | based | feelsad | weed | hug | drink | 8ball | fortune | songlink | download | help | whywoot | whymeh | props | votes | woot | meh | skip | say | version");
                         }, 500);
                         setTimeout(function(){
