@@ -50,7 +50,7 @@ toSave = {};
 toSave.settings = YungBot.settings;
 toSave.moderators = YungBot.moderators;
  
-YungBot.misc.version = "1.0.7";
+YungBot.misc.version = "1.0.9";
 YungBot.misc.origin = "This bot was created by: WildBeast, DJ-Neon-TFL, and -Based_Frecuency-";
 YungBot.misc.ready = true;
 var songBoundary = 60 * 10;
@@ -100,7 +100,7 @@ var blockedArtists = [
 
 // Filter Keywords
 YungBot.filters.beggerWords = ["fanme","fan me","fan4fan","fan 4 fan","fan pls","fans please","need fan","more fan","fan back","give me fans","gimme fans"];
-YungBot.filters.commandWords = [".tatus",".based",".changelog",".say",".weedfact",".feel",".fortune",".songlink",".down",".join",".status",".tcf",".cf",".rules",".version",".test"];
+YungBot.filters.commandWords = [".status",".based",".changelog",".say",".weedfact",".feel",".fortune",".songlink",".down",".join",".status",".tcf",".cf",".rules",".version",".test"];
 
 // Fun misc
 YungBot.misc.tacos = ["blunt","kush","Chemo","Locoweed","marijuana","Ganja"];
