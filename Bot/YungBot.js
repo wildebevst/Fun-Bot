@@ -515,14 +515,14 @@ function chatMe(msg)
                            API.sendChat("rules | themes | reward | flipcoin | weedfact | based | feelsad | weed | hug | drink | 8ball | fortune | songlink | download | help | whywoot | whymeh | props | votes | woot | meh | skip | say | version");
                         }, 500);
                         setTimeout(function(){
-                           API.sendChat("roomstats | roomstats2 | mystats | status");
+                           API.sendChat("addme | removeme | roomstats | roomstats2 | mystats | status");
                         }, 710);
                         }else if(command[1].indexOf("@") > -1){
                         setTimeout(function(){
                             API.sendChat(command[1]+" My commands: rules | theme | reward | flipcoin | weedfact | based | feelsad | weed | hug | drink | 8ball | fortune | songlink | download | help | whywoot | whymeh | props | votes | woot | meh | skip | say | version");
                         }, 500);
                         setTimeout(function(){
-                           API.sendChat("roomstats | roomstats2 | mystats | status");
+                           API.sendChat("addme | removeme | roomstats | roomstats2 | mystats | status");
                         }, 710);                        
                         }
                         break;
@@ -578,6 +578,18 @@ function chatMe(msg)
                             YungBot.skip();
                             }else{
                             API.sendChat("This command requires Bouncer only!");
+                        }
+                        break;
+                        
+                case "addme":
+                        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            API.moderateAddDJ(data.fromID);
+                        }
+                        break;
+                        
+                case "removeme":
+                        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            API.moderateRemoveDJ(data.fromID);
                         }
                         break;
                         
