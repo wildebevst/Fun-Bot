@@ -50,7 +50,7 @@ toSave = {};
 toSave.settings = YungBot.settings;
 toSave.moderators = YungBot.moderators;
  
-YungBot.misc.version = "1.0.9";
+YungBot.misc.version = "1.0.12";
 YungBot.misc.origin = "This bot was created by: WildBeast, DJ-Neon-TFL, and -Based_Frecuency-";
 YungBot.misc.ready = true;
 var songBoundary = 60 * 10;
