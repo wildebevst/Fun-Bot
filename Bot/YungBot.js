@@ -378,6 +378,9 @@ API.moderateForceSkip();
 
 YungBot.unhook = function(){
 API.off(API.CHAT);
+API.off(API.DJ_ADVANCE, djAdvanceEvent, listener, woot);
+API.off(API.USER_JOIN, UserJoin);
+API.off(API.DJ_ADVANCE, DJ_ADVANCE);
 $('#playback').show();
 $('#audience').show();
 API.setVolume(15);
