@@ -377,22 +377,10 @@ API.moderateForceSkip();
 };
 
 YungBot.unhook = function(){
-API.off(API.DJ_ADVANCE, djAdvanceEvent);
-API.off(API.DJ_ADVANCE, listener);
-API.off(API.DJ_ADVANCE, woot);
-API.off(API.USER_JOIN, UserJoin);
-API.off(API.DJ_ADVANCE, DJ_ADVANCE);
-API.off(API.USER_JOIN);
-API.off(API.USER_LEAVE);
-API.off(API.USER_SKIP);
-API.off(API.USER_FAN);
-API.off(API.CURATE_UPDATE);
-API.off(API.DJ_ADVANCE);
-API.off(API.VOTE_UPDATE);
 API.off(API.CHAT);
 $('#playback').show();
 $('#audience').show();
-API.setVolume(17);
+API.setVolume(15);
 };
 
 YungBot.hook = function(){
@@ -430,17 +418,14 @@ botMethods.checkHistory = function(){
     return caught;
 };
  
-botMethods.getID = function(username){
-    var users = API.getUsers();
-    var result = "";
-    for(var i = 0; i < users.length; i++){
-        if(users[i].username === username){
-            result = users[i].id;
-            return result;
-        }
+function getUserID(username) {
+  var users = API.getUsers();
+  for (var i in users) {
+    if (users[i].username == username) {
+      return users[i].id;
     }
- 
-    return "notFound";
+  }
+  return "User Not Found!";
 };
  
 botMethods.cleanString = function(string){
@@ -495,12 +480,13 @@ function chatMe(msg)
         API.sendChat(msg);
 };
 
-    API.on(API.CHAT, function(data){
-        if(data.message.indexOf('.') === 0){
-            var msg = data.message, from = data.from, fromID = data.fromID;
-            var command = msg.substring(1).split(' ');
-            if(typeof command[2] != "undefined"){
-                for(var i = 2; i<command.length; i++){
+        API.on(API.CHAT, function(data){
+              if(data.message.indexOf('.') === 0){
+               var msg = data.message, from = data.from, fromID = data.fromID;
+               var id = data.fromID;var msg = data.message;var userfrom = data.from;
+               var command = msg.substring(1).split(' ');
+              if(typeof command[2] != "undefined"){
+                 for(var i = 2; i<command.length; i++){
                     command[1] = command[1] + ' ' + command[i];
                 }
             }
@@ -515,14 +501,14 @@ function chatMe(msg)
                            API.sendChat("rules | themes | reward | flipcoin | weedfact | based | feelsad | weed | hug | drink | 8ball | fortune | songlink | download | help | whywoot | whymeh | props | votes | woot | meh | skip | say | version");
                         }, 500);
                         setTimeout(function(){
-                           API.sendChat("addme | removeme | roomstats | roomstats2 | mystats | status");
+                           API.sendChat("grab | add | remove | roomstats | roomstats2 | mystats | status");
                         }, 710);
                         }else if(command[1].indexOf("@") > -1){
                         setTimeout(function(){
                             API.sendChat(command[1]+" My commands: rules | theme | reward | flipcoin | weedfact | based | feelsad | weed | hug | drink | 8ball | fortune | songlink | download | help | whywoot | whymeh | props | votes | woot | meh | skip | say | version");
                         }, 500);
                         setTimeout(function(){
-                           API.sendChat("addme | removeme | roomstats | roomstats2 | mystats | status");
+                           API.sendChat("grab | add | remove | roomstats | roomstats2 | mystats | status");
                         }, 710);                        
                         }
                         break;
@@ -581,15 +567,25 @@ function chatMe(msg)
                         }
                         break;
                         
-                case "addme":
+                case "add":
                         if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                             API.moderateAddDJ(data.fromID);
                         }
                         break;
                         
-                case "removeme":
+                case "remove":
                         if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                             API.moderateRemoveDJ(data.fromID);
+                        }
+                        break;
+                        
+                case "ban":
+                       if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            var username = msg.substr(msg.indexOf('@')+1);
+                            var userid = getUserID(username);
+                            API.moderateBanUser(userid, 0, API.BAN.HOUR);
+                        }else{
+                            API.sendChat("This command requires staff members only!");
                         }
                         break;
                         
@@ -622,7 +618,7 @@ function chatMe(msg)
                         }
                         break;
                         
-                case "add":
+                case "grab":
                         if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
                         if(typeof command[1] === "undefined"){
                             $(".icon-curate").click();
