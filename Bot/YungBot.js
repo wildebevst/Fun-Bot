@@ -504,14 +504,14 @@ function chatMe(msg)
                            API.sendChat("rules | themes | reward | flipcoin | weedfact | based | feelsad | weed | hug | drink | 8ball | fortune | songlink | download | help | whywoot | whymeh | props | votes | woot | meh | skip | say | version");
                         }, 500);
                         setTimeout(function(){
-                           API.sendChat("grab | add | remove | roomstats | roomstats2 | mystats | status");
+                           API.sendChat("set {rank} | queup | quedown | grab | add | remove | roomstats | roomstats2 | mystats | status");
                         }, 710);
                         }else if(command[1].indexOf("@") > -1){
                         setTimeout(function(){
                             API.sendChat(command[1]+" My commands: rules | theme | reward | flipcoin | weedfact | based | feelsad | weed | hug | drink | 8ball | fortune | songlink | download | help | whywoot | whymeh | props | votes | woot | meh | skip | say | version");
                         }, 500);
                         setTimeout(function(){
-                           API.sendChat("grab | add | remove | roomstats | roomstats2 | mystats | status");
+                           API.sendChat("set {rank} | queup | quedown | grab | add | remove | roomstats | roomstats2 | mystats | status");
                         }, 710);                        
                         }
                         break;
@@ -587,6 +587,26 @@ function chatMe(msg)
                             var username = msg.substr(msg.indexOf('@')+1);
                             var userid = getUserID(username);
                             API.moderateBanUser(userid, 0, API.BAN.HOUR);
+                        }else{
+                            API.sendChat("This command requires staff members only!");
+                        }
+                        break;
+                        
+                case "queup":
+                       if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            var username = msg.substr(msg.indexOf('@')+1);
+                            var userid = getUserID(username);
+                            API.moderateAddDJ(userid);
+                        }else{
+                            API.sendChat("This command requires staff members only!");
+                        }
+                        break;
+                        
+                case "quedown":
+                       if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                            var username = msg.substr(msg.indexOf('@')+1);
+                            var userid = getUserID(username);
+                            API.moderateRemoveDJ(userid);
                         }else{
                             API.sendChat("This command requires staff members only!");
                         }
@@ -1310,6 +1330,76 @@ function chatMe(msg)
                             YungBot.misc.ready = false;
                             setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
+                        break;
+                }
+            }
+        }
+    });
+    
+    API.on(API.CHAT, function(data){
+        if(data.message.indexOf('.set ') === 0){
+            var msg = data.message, from = data.from, fromID = data.fromID;
+            var id = data.fromID;var msg = data.message;var userfrom = data.from;
+            var command = msg.substring(1).split(' ');
+
+            if(YungBot.misc.ready || YungBot.admins.indexOf(fromID) > -1 || API.getUser(fromID).permission > 1){
+                switch(command[1]){
+                    case 'none':
+                       if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                         var username = msg.substr(msg.indexOf('@')+1);
+                         var userid = getUserID(username);
+                            API.moderateSetRole(userid, API.ROLE.NONE);
+                        }else{
+                            API.sendChat("This command requires staff members only!");
+                        }
+                        break;
+                    case 'resident':
+                       if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                         var username = msg.substr(msg.indexOf('@')+1);
+                         var userid = getUserID(username);
+                            API.moderateSetRole(userid, API.ROLE.RESIDENTDJ);
+                        }else{
+                            API.sendChat("This command requires staff members only!");
+                        }
+                        break;
+                    case 'bouncer':
+                       if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                        var username = msg.substr(msg.indexOf('@')+1);
+                        var userid = getUserID(username);
+                            API.moderateSetRole(userid, API.ROLE.BOUNCER);
+                        }else{
+                            API.sendChat("This command requires staff members only!");
+                        }
+                        break;
+                    case 'manager':
+                       if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                        var username = msg.substr(msg.indexOf('@')+1);
+                        var userid = getUserID(username);
+                            API.moderateSetRole(userid, API.ROLE.MANAGER);
+                        }else{
+                            API.sendChat("This command requires staff members only!");
+                        }
+                        break;
+                    case 'cohost':
+                       if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                        var username = msg.substr(msg.indexOf('@')+1);
+                        var userid = getUserID(username);
+                            API.moderateSetRole(userid, API.ROLE.COHOST);
+                        }else{
+                            API.sendChat("This command requires staff members only!");
+                        }
+                        break;
+                    case 'host':
+                       if(API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
+                        var username = msg.substr(msg.indexOf('@')+1);
+                        var userid = getUserID(username);
+                            API.moderateSetRole(userid, API.ROLE.HOST);
+                        }else{
+                            API.sendChat("This command requires staff members only!");
+                        }
+                        break;
+                    default:
+                        API.sendChat("Can't set user to that variation!");
                         break;
                 }
             }
