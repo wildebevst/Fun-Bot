@@ -79,7 +79,7 @@ YungBot.admins = ["5205930e3b7903530464e5b8","50aeaeb6c3b97a2cb4c25bd2","52b8fa3
 
 // Random announcements.
 var announcements = 
-[""];
+["Yo guys! We're hosting up a new event on April 27, Visit [http://goo.gl/Cqwdfe] for more info about this. Hope to see you there!"];
 
 // Keywords of blocked songs
 var blockedSongs = [
