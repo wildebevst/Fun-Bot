@@ -88,14 +88,17 @@ var blockedSongs = [
     "The Fox",
     "I got Bitches",
     "10 hour",
-    "Trololo"
+    "Trololo",
+    "The Don't Kill Me Song"
 ];
 
 // Keywords of blocked artist.
 var blockedArtists = [
     "Justin Bieber",
     "1 Direction",
-    "Migos"
+    "Migos",
+    "Gabby G",
+    "STEPHAN KROSECZ"
 ];
 
 
