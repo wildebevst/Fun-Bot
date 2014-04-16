@@ -67,7 +67,6 @@ YungBot.filters.commandWords = new Array();
 YungBot.settings.maxLength = 10; 
 YungBot.settings.cooldown = 10; 
 YungBot.settings.staffMeansAccess = true;
-YungBot.settings.historyFilter = true;
 YungBot.settings.beggerFilter = true;
 YungBot.settings.commandFilter = true;
 YungBot.settings.interactive = true;
@@ -892,7 +891,6 @@ function chatMe(msg)
                             }
                             hours == 0 ? response = "Running for " + minutes + "m " : response = "Running for " + hours + "h " + minutes + "m";
                             response = response + " | Begger filter: "+ YungBot.settings.beggerFilter;
-                            response = response + " | History filter: "+ YungBot.settings.historyFilter;
                             response = response + " | MaxLength: " + YungBot.settings.maxLength + "m";
                             response = response + " | Cooldown: " + YungBot.settings.cooldown + "s";
                             response = response + " | Removed Video Filter: "+ YungBot.settings.removedFilter;
