@@ -54,7 +54,7 @@ YungBot.misc.version = "1.1.17";
 YungBot.misc.origin = "This bot was created by: WildBeast, DJ-Neon-TFL, and -Based_Frecuency-";
 YungBot.misc.ready = true;
 var songBoundary = 60 * 10;
-var announcementTick = 60 * 10;
+var announcementTick = 60 * 17;
 var lastAnnouncement = 0;
 
 joined = new Date().getTime();
