@@ -350,7 +350,7 @@ YungBot.pubVars.skipOnExceed;
 YungBot.pubVars.command = false;
  
 Array.prototype.remove=function(){var c,f=arguments,d=f.length,e;while(d&&this.length){c=f[--d];while((e=this.indexOf(c))!==-1){this.splice(e,1)}}return this};
-if(window.location.href === "http://plug.dj/surullinen/"){window.setInterval(sendAnnouncement, 1000 * announcementTick);
+if(window.location.href === "http://plug.dj/chill-out-hall/"){window.setInterval(sendAnnouncement, 1000 * announcementTick);
 API.on(API.DJ_ADVANCE, djAdvanceEvent);
 API.on(API.DJ_ADVANCE, listener);
 API.on(API.DJ_ADVANCE, woot);
