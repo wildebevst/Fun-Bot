@@ -486,6 +486,38 @@ function chatMe(msg)
         API.sendChat(msg);
 };
 
+botMethods.djAdvanceEvent = function(data){
+    clearTimeout(YungBot.pubVars.skipOnExceed);
+    if(YungBot.misc.lockSkipping){
+        API.moderateAddDJ(YungBot.misc.lockSkipped);
+        YungBot.misc.lockSkipped = "0";
+        YungBot.misc.lockSkipping = false;
+        setTimeout(function(){ API.moderateRoomProps(false, true); }, 500);
+    }
+    var song = API.getMedia();
+    if(botMethods.checkHistory() > 0 && YungBot.settings.historyFilter){
+        if(API.getUser().permission < 2){
+            API.sendChat("This song is in the history! You should make me a mod so that I could skip it!");
+        }else if(API.getUser().permission > 1){
+            API.sendChat("@" + API.getDJs()[0].username + ", playing songs that are in the history isn't allowed, please check next time! Skipping..");
+            botMethods.skip()
+        }else if(song.duration > YungBot.settings.maxLength * 60){
+            YungBot.pubVars.skipOnExceed = setTimeout( function(){
+                API.sendChat("@"+API.getDJs()[0].username+" You have now played for as long as this room allows, time to let someone else have the booth!");
+                botMethods.skip();
+            }, YungBot.settings.maxLength * 60000);
+            //API.sendChat("@"+API.getDJs()[0].username+" This song will be skipped " + YungBot.settings.maxLength + " minutes from now because it exceeds the max song length.");
+        }else{
+            setTimeout(function(){
+                if(botMethods.checkHistory() > 0 && YungBot.settings.historyFilter){
+                    API.sendChat("@" + API.getDJs()[0].username + ", playing songs that are in the history isn't allowed, please check next time! Skipping..");
+                    botMethods.skip()
+                };
+            }, 1500);
+        }
+    }
+};
+
         API.on(API.CHAT, function(data){
               if(data.message.indexOf('.') === 0){
                var msg = data.message, from = data.from, fromID = data.fromID;
@@ -1000,8 +1032,8 @@ function chatMe(msg)
                            }
                         }
                        if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
-                            mubBot.misc.ready = false;
-                            setTimeout(function(){ mubBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
+                            YungBot.misc.ready = false;
+                            setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                         }
                         break;
  
@@ -1428,10 +1460,13 @@ function chatMe(msg)
     
     API.on(API.CHAT, function(data){
         msg = data.message.toLowerCase(), chatID = data.chatID, fromID = data.fromID;
+        var botName = API.getUser().username;
+        var botNameMention = "@"+ botName;
         if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || YungBot.admins.indexOf(fromID) > -1){
-            if(msg.indexOf('hello bot') !== -1 || msg.indexOf('bot hello') !== -1 || msg.indexOf('hi bot') !== -1 || msg.indexOf('bot hi') !== -1 || msg.indexOf('sup bot') !== -1 || msg.indexOf('bot sup') !== -1 || msg.indexOf('hey bot') !== -1 || msg.indexOf('bot hey') !== -1 || msg.indexOf('howdy bot') !== -1 || msg.indexOf('bot howdy') !== -1 || msg.indexOf('aye bot') !== -1 || msg.indexOf('yo bot') !== -1 || msg.indexOf('waddup bot') !== -1 || msg.indexOf('bot waddup') !== -1){
+            //if(msg.indexOf('hello bot') !== -1 || msg.indexOf('bot hello') !== -1 || msg.indexOf('hi bot') !== -1 || msg.indexOf('bot hi') !== -1 || msg.indexOf('sup bot') !== -1 || msg.indexOf('bot sup') !== -1 || msg.indexOf('hey bot') !== -1 || msg.indexOf('bot hey') !== -1 || msg.indexOf('howdy bot') !== -1 || msg.indexOf('bot howdy') !== -1 || msg.indexOf('aye bot') !== -1 || msg.indexOf('yo bot') !== -1 || msg.indexOf('waddup bot') !== -1 || msg.indexOf('bot waddup') !== -1){
+                if(msg.indexOf(botNameMentio+" Hello" !== -1){
                 var HelloMsg = ["Hey!","Oh hey there!","Good day sir!","Hi","Howdy!","Waddup!"];
-                API.sendChat("@" + data.from + " " + HelloMsg[Math.floor(Math.random() * HelloMsg.length)]);
+                API.sendChat("@"+ data.from +" "+ HelloMsg[Math.floor(Math.random() * HelloMsg.length)]);
                     YungBot.misc.ready = false;
                     setTimeout(function(){ YungBot.misc.ready = true; }, YungBot.settings.cooldown * 1000);
                 }
