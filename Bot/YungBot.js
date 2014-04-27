@@ -64,7 +64,7 @@ YungBot.filters.beggerWords = new Array();
 YungBot.filters.commandWords = new Array();
 
 // Bot's settings
-YungBot.settings.maxLength = 10; 
+YungBot.settings.maxLength = 40; 
 YungBot.settings.cooldown = 10; 
 YungBot.settings.staffMeansAccess = true;
 YungBot.settings.beggerFilter = true;
@@ -78,7 +78,7 @@ YungBot.admins = ["5205930e3b7903530464e5b8","50aeaeb6c3b97a2cb4c25bd2","52b8fa3
 
 // Random announcements.
 var announcements = 
-["Yo guys! We're hosting up a new event on April 27, Visit [http://goo.gl/Cqwdfe] for more info about this. Hope to see you at the event!"];
+[" be sure to set http://www.sadxemotional.com/ as your homepage "];
 
 // Keywords of blocked songs
 var blockedSongs = [
@@ -363,13 +363,6 @@ API.setVolume(0);
 function woot(){
 $('#woot').click();
 };
- 
-function UserJoin(user)
-{
-var JoinMsg = ["@user has joined!","welcome @user!","Hey there @user!","Glad you came by @user"];
-r = Math.floor(Math.random() * JoinMsg.length);
-API.sendChat(JoinMsg[r].replace("user", user.username));
-};
 
 function djAdvanceEvent(data){
     setTimeout(function(){ botMethods.data }, 500);
@@ -523,10 +516,10 @@ function chatMe(msg)
                 case "themes":
                         if(typeof command[1] == "undefined"){
                         setTimeout(function(){
-                           API.sendChat("[Themes] (1) Chill Trap Future Beats, (2) Good Hip-Hop, (3) hopped-Screwed. [Not allowed] (1) DubstepHouse, (2) Rock, (3) DnB, (4) Techno, (5) Festival Trap, (6) HOOTS.");
+                           API.sendChat("[Themes] (1) Chill - Trap & Hip Hop -  (2) future beats (3) chopped-screwed. [Not allowed] (1) DubstepHouse, (2) Rock, (3) DnB, (4) Techno, (5) Festival Trap, (6) HOOTS.");
                         }, 650);
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" [Themes] (1) Chill Trap Future Beats, (2) Good Hip-Hop, (3) hopped-Screwed. [Not allowed] (1) DubstepHouse, (2) Rock, (3) DnB, (4) Techno, (5) Festival Trap, (6) HOOTS.");
+                            API.sendChat(command[1]+" [Themes] (1) Chill - Trap & Hip Hop - (2) future beats (3) chopped-screwed. [Not allowed] (1) DubstepHouse, (2) Rock, (3) DnB, (4) Techno, (5) Festival Trap, (6) HOOTS.");
                         }
                         break;
                         
