@@ -416,9 +416,9 @@ botMethods.checkHistory = function(){
     caught--;
     return caught;
     
-function UserJoin(user)
+ function UserJoin(user)
 {
-var JoinMsg = ["@user has joined!","welcome @user!","Hey there @user!","Glad you came by @user"];
+var JoinMsg = ["@user has joined!","welcome, @user!","Hey there, @user!","Glad you came by, @user"];
 r = Math.floor(Math.random() * JoinMsg.length);
 API.sendChat(JoinMsg[r].replace("user", user.username));
 };
