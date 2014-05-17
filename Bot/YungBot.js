@@ -105,7 +105,6 @@ YungBot.filters.beggerWords = ["fanme","fan me","fan4fan","fan 4 fan","fan pls",
 YungBot.filters.commandWords = [".status",".based",".changelog",".say",".weedfact",".feel",".fortune",".songlink",".down",".join",".status",".tcf",".cf",".rules",".version",".test"];
 
 // Fun misc
-YungBot.misc.tacos = ["blunt","kush","Chemo","Locoweed","marijuana","Ganja"];
 YungBot.misc.cookie = ["a fat blunt", "an oz of blue dream", "a bottle of cocunut rum", "a 'special' brownie", "a gram of dabs", "scooby snacks", "a blue haze cupcake", "a joint","a bong", "Chocolate Chip Icecream Cone"];
 YungBot.misc.ball = [
 " It is certain",
@@ -1455,7 +1454,7 @@ function chatMe(msg)
                 var TYMsg = ["You're welcome! :D","Your always welcome bro!","No prob man.."];
                 API.sendChat("@" + data.from + " " + TYMsg[Math.floor(Math.random() * TYMsg.length)]);
                     Funbot.misc.ready = false;
-                    setTimeout(function(){ Funbot.misc.ready = true; }, Funbot.settings.cooldown * 1000);
+                    setTimeout(function(){ Yungbot.misc.ready = true; }, Yungbot.settings.cooldown * 1000);
                 }
         }
         if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Yungbot.admins.indexOf(fromID) > -1){
@@ -1471,7 +1470,7 @@ function chatMe(msg)
                 var FuckMsg = ["Nah.. I don't need another fuck after giving your mom one last night.","</input fuck> Jk... Fuck you too","< Test fuck >.. Sorry 0% fucks were given by me."];
                 API.sendChat("@" + data.from + " " + FuckMsg[Math.floor(Math.random() * FuckMsg.length)]);
                     Funbot.misc.ready = false;
-                    setTimeout(function(){ Funbot.misc.ready = true; }, Funbot.settings.cooldown * 1000);
+                    setTimeout(function(){ Yungbot.misc.ready = true; }, Yungbot.settings.cooldown * 1000);
                 }
         }
         if(API.getUser(fromID).permission < 2 || API.getUser(fromID).permission > 1 || Yungbot.admins.indexOf(fromID) > -1){
