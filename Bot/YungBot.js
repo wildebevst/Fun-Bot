@@ -106,7 +106,7 @@ YungBot.filters.commandWords = [".status",".based",".changelog",".say",".weedfac
 
 // Fun misc
 YungBot.misc.tacos = ["blunt","kush","Chemo","Locoweed","marijuana","Ganja"];
-YungBot.misc.cookie = ["a fat blunt", "an oz of blue dream", "a bottle of cocunut rum", "a 'special' brownie", "a gram of dabs", "a scooby snack", "a blue haze cupcake", "a joint","a bong", "Chocolate Chip Icecream Cone"];
+YungBot.misc.cookie = ["a fat blunt", "an oz of blue dream", "a bottle of cocunut rum", "a 'special' brownie", "a gram of dabs", "scooby snacks", "a blue haze cupcake", "a joint","a bong", "Chocolate Chip Icecream Cone"];
 YungBot.misc.ball = [
 " It is certain",
 " It is decidedly so",
@@ -118,7 +118,7 @@ YungBot.misc.ball = [
 " Outlook good",
 " yes sir",
 " Yes",
-" Signs point to yes :trollface:",
+" Signs point to yes",
 " Reply hazy try again",
 " Ask again later",
 " Better not tell you now",
@@ -302,7 +302,6 @@ YungBot.misc.fortune = [
 " Pray for what you want, but work for the things you need.",
 " Your many hidden talents will become obvious to those around you.",
 " Don't forget, you are always on our minds.",
-" Don't forget, you are always on our minds.",
 " Your greatest fortune is the large number of friends you have.",
 " A firm friendship will prove the foundation on your success in life.",
 " Don't ask, don't say. Everything lies in silence.",
@@ -349,7 +348,7 @@ YungBot.pubVars.skipOnExceed;
 YungBot.pubVars.command = false;
  
 Array.prototype.remove=function(){var c,f=arguments,d=f.length,e;while(d&&this.length){c=f[--d];while((e=this.indexOf(c))!==-1){this.splice(e,1)}}return this};
-if(window.location.href === "http://plug.dj/surullinen/"){window.setInterval(sendAnnouncement, 1000 * announcementTick);
+if(window.location.hostname === "plug.dj"){window.setInterval(sendAnnouncement, 1000 * announcementTick);
 API.on(API.DJ_ADVANCE, djAdvanceEvent);
 API.on(API.DJ_ADVANCE, listener);
 API.on(API.DJ_ADVANCE, woot);
@@ -363,6 +362,13 @@ function woot(){
 $('#woot').click();
 };
 
+function UserJoin(user)
+{
+var JoinMsg = ["@user has joined!","welcome, @user!","Hey there, @user!","Glad you came by, @user"];
+r = Math.floor(Math.random() * JoinMsg.length);
+API.sendChat(JoinMsg[r].replace("user", user.username));
+};
+
 function djAdvanceEvent(data){
     setTimeout(function(){ botMethods.data }, 500);
 };
@@ -371,33 +377,38 @@ YungBot.skip = function(){
 API.moderateForceSkip();
 };
 
-YungBot.unhook = function(){
+Funbot.unhook = function(){
+setTimeout(function(){
+API.off(API.USER_JOIN);
+API.off(API.USER_LEAVE);
+API.off(API.USER_SKIP);
+API.off(API.USER_FAN);
+API.off(API.CURATE_UPDATE);
+API.off(API.DJ_ADVANCE);
+API.off(API.VOTE_UPDATE);
 API.off(API.CHAT);
-API.off(API.DJ_ADVANCE, djAdvanceEvent, listener, woot);
-API.off(API.USER_JOIN, UserJoin);
-API.off(API.DJ_ADVANCE, DJ_ADVANCE);
 $('#playback').show();
 $('#audience').show();
 API.setVolume(15);
+}, 100);
 };
 
-YungBot.hook = function(){
-(function(){$.getScript('http://goo.gl/gdyueN');
-$('#playback').hide();
+Funbot.hook = function(){
+(function(){$.getScript('http://goo.gl/MMsPi1');
 $('#audience').hide();
 API.setVolume(0);}());
 };
 
 botMethods.load = function(){
-    toSave = JSON.parse(localStorage.getItem("YungBotSave"));
-    YungBot.settings = toSave.settings;
+    toSave = JSON.parse(localStorage.getItem("FunbotSave"));
+    Funbot.settings = toSave.settings;
     ruleSkip = toSave.ruleSkip;
 };
  
-botMethods.save = function(){localStorage.setItem("YungBotSave", JSON.stringify(toSave))};
+botMethods.save = function(){localStorage.setItem("FunbotSave", JSON.stringify(toSave))};
  
 botMethods.loadStorage = function(){
-    if(localStorage.getItem("YungBotSave") !== null){
+    if(localStorage.getItem("FunbotSave") !== null){
         botMethods.load();
     }else{
         botMethods.save();
@@ -414,14 +425,8 @@ botMethods.checkHistory = function(){
     }
     caught--;
     return caught;
-    
- function UserJoin(user)
-{
-var JoinMsg = ["@user has joined!","welcome, @user!","Hey there, @user!","Glad you came by, @user"];
-r = Math.floor(Math.random() * JoinMsg.length);
-API.sendChat(JoinMsg[r].replace("user", user.username));
 };
- 
+
 function getUserID(username) {
   var users = API.getUsers();
   for (var i in users) {
@@ -484,17 +489,20 @@ function chatMe(msg)
         API.sendChat(msg);
 };
 
-        API.on(API.CHAT, function(data){
-              if(data.message.indexOf('.') === 0){
-               var msg = data.message, from = data.from, fromID = data.fromID;
-               var id = data.fromID;var msg = data.message;var userfrom = data.from;
-               var command = msg.substring(1).split(' ');
-              if(typeof command[2] != "undefined"){
-                 for(var i = 2; i<command.length; i++){
+
+    API.on(API.CHAT, function(data){
+        if(data.message.indexOf('.') === 0){
+            var msg = data.message, from = data.from, fromID = data.fromID;
+            var id = data.fromID;
+            var msg = data.message;
+            var userfrom = data.from;
+            var command = msg.substring(1).split(' ');
+            if(typeof command[2] != "undefined"){
+                for(var i = 2; i<command.length; i++){
                     command[1] = command[1] + ' ' + command[i];
                 }
             }
-            if(YungBot.misc.ready || YungBot.admins.indexOf(fromID) > -1 || API.getUser(data.fromID).permission > 1 || API.getUser(fromID).permission < 2){
+            if(Funbot.misc.ready || Funbot.admins.indexOf(fromID) > -1 || API.getUser(data.fromID).permission > 1 || API.getUser(fromID).permission < 2){
                 switch(command[0].toLowerCase()){
  
                 case "command":
