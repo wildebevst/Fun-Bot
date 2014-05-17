@@ -393,7 +393,7 @@ API.setVolume(15);
 };
 
 Funbot.hook = function(){
-(function(){$.getScript('http://goo.gl/MMsPi1');
+(function(){$.getScript('https://raw.githubusercontent.com/wildebevst/Fun-Bot/master/Bot/YungBot.js');
 $('#audience').hide();
 API.setVolume(0);}());
 };
