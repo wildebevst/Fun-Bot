@@ -1514,7 +1514,7 @@ function chatMe(msg)
     console.log("YungBot-Script version " + YungBot.misc.version);
  
     setTimeout(function(){
-        $.getScript('http://goo.gl/9vurzR');
+        $.getScript('https://raw.githubusercontent.com/wildebevst/Fun-Bot/master/Bot/YungBot.js');
         $.getScript('http://connect.soundcloud.com/sdk.js');
     }, 700);
  
