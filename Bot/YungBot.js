@@ -64,7 +64,7 @@ YungBot.filters.beggerWords = new Array();
 YungBot.filters.commandWords = new Array();
 
 // Bot's settings
-YungBot.settings.maxLength = 40; 
+YungBot.settings.maxLength = 10; 
 YungBot.settings.cooldown = 10; 
 YungBot.settings.staffMeansAccess = true;
 YungBot.settings.beggerFilter = true;
@@ -95,7 +95,6 @@ var blockedSongs = [
 var blockedArtists = [
     "Justin Bieber",
     "1 Direction",
-    "Migos",
     "Gabby G",
     "STEPHAN KROSECZ",
 ];
