@@ -51,7 +51,7 @@ toSave.settings = YungBot.settings;
 toSave.moderators = YungBot.moderators;
  
 YungBot.misc.version = "1.1.18";
-YungBot.misc.origin = "This bot was created by: WildBeast, DJ-Neon-TFL, and -Based_Frecuency-";
+YungBot.misc.origin = "This bot was created by: WildeBeast, DJ-Neon-TFL, and -Based_Frecuency-";
 YungBot.misc.ready = true;
 var songBoundary = 60 * 10;
 var announcementTick = 60 * 10;
@@ -105,30 +105,29 @@ YungBot.filters.beggerWords = ["fanme","fan me","fan4fan","fan 4 fan","fan pls",
 YungBot.filters.commandWords = [".status",".based",".changelog",".say",".weedfact",".feel",".fortune",".songlink",".down",".join",".status",".tcf",".cf",".rules",".version",".test"];
 
 // Fun misc
+Yungbot.misc.tacos = ["blunt","kush","Chemo","Locoweed","marijuana","Ganja"];
 YungBot.misc.cookie = ["a fat blunt", "an oz of blue dream", "a bottle of cocunut rum", "a 'special' brownie", "a gram of dabs", "scooby snacks", "a blue haze cupcake", "a joint","a bong", "Chocolate Chip Icecream Cone"];
 YungBot.misc.ball = [
-" It is certain",
-" It is decidedly so",
-" Without a doubt",
-" Yes definitely",
-" You may rely on it",
-" As I see it yes",
-" Most likely",
-" Outlook good",
-" yes sir",
-" Yes",
-" Signs point to yes",
-" Reply hazy try again",
-" Ask again later",
-" Better not tell you now",
-" Cannot predict now",
-" Concentrate and ask again",
-" Don't count on it",
-" Are you daft?",
-" My reply is no",
-" My sources say no",
-" Outlook not so good",
-" Very doubtful"];
+" [:8ball:] It is certain",
+" [:8ball:] It is decidedly so",
+" [:8ball:] Without a doubt",
+" [:8ball:] Yes definitely",
+" [:8ball:] You may rely on it",
+" [:8ball:] As I see it yes",
+" [:8ball:] Most likely",
+" [:8ball:] Outlook good",
+" [:8ball:] Yes",
+" [:8ball:] Signs point to yes :trollface:",
+" [:8ball:] Reply hazy try again",
+" [:8ball:] Ask again later",
+" [:8ball:] Better not tell you now",
+" [:8ball:] Cannot predict now",
+" [:8ball:] Concentrate and ask again",
+" [:8ball:] Don't count on it",
+" [:8ball:] My reply is no",
+" [:8ball:] My sources say no",
+" [:8ball:] Outlook not so good",
+" [:8ball:] Very doubtful"];
 
 YungBot.misc.ht = ["My magic coins says: Tails", "My magic coin says: Heads"];
 
@@ -399,15 +398,15 @@ API.setVolume(0);}());
 };
 
 botMethods.load = function(){
-    toSave = JSON.parse(localStorage.getItem("YungbotSave"));
+    toSave = JSON.parse(localStorage.getItem("FunbotSave"));
     Funbot.settings = toSave.settings;
     ruleSkip = toSave.ruleSkip;
 };
  
-botMethods.save = function(){localStorage.setItem("YungbotSave", JSON.stringify(toSave))};
+botMethods.save = function(){localStorage.setItem("FunbotSave", JSON.stringify(toSave))};
  
 botMethods.loadStorage = function(){
-    if(localStorage.getItem("YungbotSave") !== null){
+    if(localStorage.getItem("FunbotSave") !== null){
         botMethods.load();
     }else{
         botMethods.save();
@@ -509,7 +508,7 @@ function chatMe(msg)
                         if(typeof command[1] == "undefined"){
                             API.sendChat(".{commands} Mention is included!");
                         setTimeout(function(){
-                           API.sendChat("rules | themes | reward | flipcoin | weedfact | based | feelsad | weed | hug | drink | 8ball | fortune | songlink | download | help | whywoot | whymeh | props | votes | woot | meh | skip | say | version");
+                           API.sendChat("rules | theme | reward | flipcoin | weedfact | based | feelsad | weed | hug | drink | 8ball | fortune | songlink | download | help | whywoot | whymeh | props | votes | woot | meh | skip | say | version");
                         }, 500);
                         setTimeout(function(){
                            API.sendChat("set {rank} | queup | quedown | grab | add | remove | roomstats | roomstats2 | mystats | status");
